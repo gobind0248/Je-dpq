@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question>
+    <text>Q1. 1 millimetre is equal to how many micrometres (microns)?</text>
+    <option correct="false">10 µm</option>
+    <option correct="false">100 µm</option>
+    <option correct="true">1000 µm</option>
+    <option correct="false">10 000 µm</option>
+  </question>
+
+  <question>
+    <text>Q2. 1 inch is equal to</text>
+    <option correct="false">2.54 mm</option>
+    <option correct="true">25.4 mm</option>
+    <option correct="false">254 mm</option>
+    <option correct="false">0.254 mm</option>
+  </question>
+
+  <question>
+    <text>Q3. 0.02 mm expressed in micrometre is</text>
+    <option correct="false">2 µm</option>
+    <option correct="true">20 µm</option>
+    <option correct="false">200 µm</option>
+    <option correct="false">0.2 µm</option>
+  </question>
+
+  <question>
+    <text>Q4. A length of 1250 mm is equal to</text>
+    <option correct="false">1.05 m</option>
+    <option correct="true">1.25 m</option>
+    <option correct="false">2.5 m</option>
+    <option correct="false">12.5 m</option>
+  </question>
+
+  <question>
+    <text>Q5. 0.5 metre is equal to how many millimetres?</text>
+    <option correct="false">5 mm</option>
+    <option correct="false">50 mm</option>
+    <option correct="true">500 mm</option>
+    <option correct="false">5000 mm</option>
+  </question>
+
+  <question>
+    <text>Q6. 25.4 mm is approximately equal to</text>
+    <option correct="false">0.1 inch</option>
+    <option correct="true">1 inch</option>
+    <option correct="false">2 inches</option>
+    <option correct="false">0.01 inch</option>
+  </question>
+
+  <question>
+    <text>Q7. 0.5 mm clearance is equal to</text>
+    <option correct="false">5 µm</option>
+    <option correct="false">50 µm</option>
+    <option correct="true">500 µm</option>
+    <option correct="false">5000 µm</option>
+  </question>
+
+  <question>
+    <text>Q8. The basic size of a shaft is</text>
+    <option correct="true">The size from which limits are derived</option>
+    <option correct="false">Always the maximum actual size</option>
+    <option correct="false">Always the minimum actual size</option>
+    <option correct="false">Equal to mean size after machining</option>
+  </question>
+
+  <question>
+    <text>Q9. Upper limit of size means</text>
+    <option correct="false">Minimum permissible size</option>
+    <option correct="true">Maximum permissible size</option>
+    <option correct="false">Exact theoretically correct size</option>
+    <option correct="false">Average of limits of size</option>
+  </question>
+
+  <question>
+    <text>Q10. Lower limit of size is</text>
+    <option correct="true">The minimum permissible size</option>
+    <option correct="false">The nominal size</option>
+    <option correct="false">The actual size</option>
+    <option correct="false">Always zero</option>
+  </question>
+
+  <question>
+    <text>Q11. Tolerance on a dimension is</text>
+    <option correct="false">Always zero for precision work</option>
+    <option correct="true">Difference between upper and lower limit</option>
+    <option correct="false">Same as allowance</option>
+    <option correct="false">Only the positive deviation</option>
+  </question>
+
+  <question>
+    <text>Q12. If upper limit is 50.05 mm and lower limit is 49.95 mm, the tolerance is</text>
+    <option correct="false">0.05 mm</option>
+    <option correct="true">0.10 mm</option>
+    <option correct="false">0.5 mm</option>
+    <option correct="false">1.0 mm</option>
+  </question>
+
+  <question>
+    <text>Q13. In a size 40 +0.02 / -0.00, the tolerance is</text>
+    <option correct="false">0.00 mm</option>
+    <option correct="true">0.02 mm</option>
+    <option correct="false">0.04 mm</option>
+    <option correct="false">0.20 mm</option>
+  </question>
+
+  <question>
+    <text>Q14. A dimension given as 50 +0.01 / -0.03 mm is an example of</text>
+    <option correct="false">Unilateral tolerance</option>
+    <option correct="true">Bilateral tolerance</option>
+    <option correct="false">Zero tolerance</option>
+    <option correct="false">Limit gauge</option>
+  </question>
+
+  <question>
+    <text>Q15. A dimension written as 60 +0.00 / -0.05 mm is an example of</text>
+    <option correct="true">Unilateral tolerance</option>
+    <option correct="false">Bilateral tolerance</option>
+    <option correct="false">Symmetric tolerance</option>
+    <option correct="false">Transition tolerance</option>
+  </question>
+
+  <question>
+    <text>Q16. Allowance between mating parts is</text>
+    <option correct="true">Intentional difference between basic sizes</option>
+    <option correct="false">Same as tolerance on each part</option>
+    <option correct="false">Always zero</option>
+    <option correct="false">Equal to machining error</option>
+  </question>
+
+  <question>
+    <text>Q17. Clearance is defined as</text>
+    <option correct="false">Difference between maximum sizes of hole and shaft</option>
+    <option correct="true">Difference between sizes of hole and shaft before assembly</option>
+    <option correct="false">Extra material for machining</option>
+    <option correct="false">Deviation from nominal size</option>
+  </question>
+
+  <question>
+    <text>Q18. In a clearance fit</text>
+    <option correct="true">Hole is always larger than shaft</option>
+    <option correct="false">Shaft is always larger than hole</option>
+    <option correct="false">Either clearance or interference may occur</option>
+    <option correct="false">No tolerance is permitted</option>
+  </question>
+
+  <question>
+    <text>Q19. In an interference fit</text>
+    <option correct="false">Hole is larger than shaft</option>
+    <option correct="true">Shaft is larger than hole</option>
+    <option correct="false">Clearance is always positive</option>
+    <option correct="false">No allowance is provided</option>
+  </question>
+
+  <question>
+    <text>Q20. In a transition fit</text>
+    <option correct="true">Either slight clearance or interference may exist</option>
+    <option correct="false">Only clearance is possible</option>
+    <option correct="false">Only interference is possible</option>
+    <option correct="false">No tolerance is given</option>
+  </question>
+
+  <question>
+    <text>Q21. Hole basis system means</text>
+    <option correct="true">Hole is kept as basic size and shaft sizes are varied</option>
+    <option correct="false">Shaft is basic and holes are varied</option>
+    <option correct="false">Both hole and shaft are basic</option>
+    <option correct="false">Only shaft is measured</option>
+  </question>
+
+  <question>
+    <text>Q22. Shaft basis system means</text>
+    <option correct="false">Hole is basic and shaft varied</option>
+    <option correct="true">Shaft is basic size and holes are varied</option>
+    <option correct="false">Both sizes remain same</option>
+    <option correct="false">No tolerance on shaft</option>
+  </question>
+
+  <question>
+    <text>Q23. Which system is more commonly used in general machine design and railway workshops?</text>
+    <option correct="true">Hole basis system</option>
+    <option correct="false">Shaft basis system</option>
+    <option correct="false">Mixed basis system</option>
+    <option correct="false">No basis system</option>
+  </question>
+
+  <question>
+    <text>Q24. In ISO system of limits and fits, capital letters (H, G etc.) are used for</text>
+    <option correct="true">Holes</option>
+    <option correct="false">Shafts</option>
+    <option correct="false">Threads</option>
+    <option correct="false">Surface finish</option>
+  </question>
+
+  <question>
+    <text>Q25. In ISO system of limits and fits, small letters (h, g etc.) are used for</text>
+    <option correct="false">Holes</option>
+    <option correct="true">Shafts</option>
+    <option correct="false">Gears</option>
+    <option correct="false">Keys</option>
+  </question>
+
+  <question>
+    <text>Q26. The letter “H” in a hole symbol such as H7 indicates</text>
+    <option correct="true">Fundamental deviation of hole</option>
+    <option correct="false">Tolerance grade</option>
+    <option correct="false">Shaft deviation</option>
+    <option correct="false">Surface roughness</option>
+  </question>
+
+  <question>
+    <text>Q27. The number “7” in H7 indicates</text>
+    <option correct="false">Fundamental deviation</option>
+    <option correct="true">Tolerance grade of hole</option>
+    <option correct="false">Number of pieces</option>
+    <option correct="false">Surface finish grade</option>
+  </question>
+
+  <question>
+    <text>Q28. Fundamental deviation is</text>
+    <option correct="true">Closest limit deviation to the basic size</option>
+    <option correct="false">Difference between two actual sizes</option>
+    <option correct="false">Sum of tolerances</option>
+    <option correct="false">Always zero</option>
+  </question>
+
+  <question>
+    <text>Q29. Upper deviation is defined as</text>
+    <option correct="true">Algebraic difference between upper limit and basic size</option>
+    <option correct="false">Difference between upper and lower limits</option>
+    <option correct="false">Difference between actual size and nominal size</option>
+    <option correct="false">Always positive</option>
+  </question>
+
+  <question>
+    <text>Q30. Lower deviation is</text>
+    <option correct="true">Algebraic difference between lower limit and basic size</option>
+    <option correct="false">Difference between two tolerances</option>
+    <option correct="false">Same as upper deviation</option>
+    <option correct="false">Always negative</option>
+  </question>
+
+  <question>
+    <text>Q31. A size specified as 25 ±0.01 mm has</text>
+    <option correct="true">Tolerance of 0.02 mm</option>
+    <option correct="false">Tolerance of 0.01 mm</option>
+    <option correct="false">Zero tolerance</option>
+    <option correct="false">Unilateral tolerance</option>
+  </question>
+
+  <question>
+    <text>Q32. A hole is specified as 40 H7 and a shaft as 40 g6. The basic size is</text>
+    <option correct="true">40 mm</option>
+    <option correct="false">H7</option>
+    <option correct="false">g6</option>
+    <option correct="false">7 mm</option>
+  </question>
+
+  <question>
+    <text>Q33. A steel rule is mainly used for</text>
+    <option correct="true">Direct linear measurement</option>
+    <option correct="false">Checking roundness</option>
+    <option correct="false">Checking surface roughness</option>
+    <option correct="false">Measuring angles</option>
+  </question>
+
+  <question>
+    <text>Q34. Least count of a typical metric steel rule is</text>
+    <option correct="false">1 mm</option>
+    <option correct="false">0.1 mm</option>
+    <option correct="true">0.5 mm (by estimation)</option>
+    <option correct="false">0.01 mm</option>
+  </question>
+
+  <question>
+    <text>Q35. A vernier caliper with 50 vernier divisions equal to 49 main scale divisions of 1 mm each has least count</text>
+    <option correct="true">0.02 mm</option>
+    <option correct="false">0.01 mm</option>
+    <option correct="false">0.05 mm</option>
+    <option correct="false">0.1 mm</option>
+  </question>
+
+  <question>
+    <text>Q36. Least count of a standard outside micrometer (metric) is</text>
+    <option correct="false">0.1 mm</option>
+    <option correct="true">0.01 mm</option>
+    <option correct="false">0.001 mm</option>
+    <option correct="false">0.05 mm</option>
+  </question>
+
+  <question>
+    <text>Q37. Slip gauges are mainly used for</text>
+    <option correct="true">Precision length standards</option>
+    <option correct="false">Checking angles only</option>
+    <option correct="false">Measuring taper</option>
+    <option correct="false">Measuring pressure</option>
+  </question>
+
+  <question>
+    <text>Q38. Feeler gauges are used to measure</text>
+    <option correct="false">Diameter of shaft</option>
+    <option correct="false">Surface finish</option>
+    <option correct="true">Small clearances or gaps</option>
+    <option correct="false">Weight of components</option>
+  </question>
+
+  <question>
+    <text>Q39. Dial indicators are generally used to measure</text>
+    <option correct="false">Temperature</option>
+    <option correct="true">Small linear displacements</option>
+    <option correct="false">Torque</option>
+    <option correct="false">Speed</option>
+  </question>
+
+  <question>
+    <text>Q40. A plug gauge is used to check</text>
+    <option correct="true">Size of holes</option>
+    <option correct="false">Size of shafts</option>
+    <option correct="false">Surface roughness</option>
+    <option correct="false">Thread pitch</option>
+  </question>
+
+  <question>
+    <text>Q41. A snap gauge is used for checking</text>
+    <option correct="true">External dimensions of shafts</option>
+    <option correct="false">Internal diameter</option>
+    <option correct="false">Angle of taper</option>
+    <option correct="false">Flatness</option>
+  </question>
+
+  <question>
+    <text>Q42. Vernier depth gauge is used to measure</text>
+    <option correct="false">External diameter</option>
+    <option correct="true">Depth of slots or holes</option>
+    <option correct="false">Thread pitch</option>
+    <option correct="false">Gear tooth thickness</option>
+  </question>
+
+  <question>
+    <text>Q43. Surface plate in a workshop is used as</text>
+    <option correct="true">Reference surface for measurement</option>
+    <option correct="false">Base for heavy machining</option>
+    <option correct="false">Storage platform</option>
+    <option correct="false">Welding table</option>
+  </question>
+
+  <question>
+    <text>Q44. The process of comparing an instrument with a standard is called</text>
+    <option correct="true">Calibration</option>
+    <option correct="false">Inspection</option>
+    <option correct="false">Tolerance</option>
+    <option correct="false">Fitting</option>
+  </question>
+
+  <question>
+    <text>Q45. Which of the following gives maximum accuracy?</text>
+    <option correct="false">Steel rule</option>
+    <option correct="false">Vernier caliper</option>
+    <option correct="true">Micrometer</option>
+    <option correct="false">Measuring tape</option>
+  </question>
+
+  <question>
+    <text>Q46. Out of the following, which error is systematic?</text>
+    <option correct="true">Zero error of instrument</option>
+    <option correct="false">Parallax error</option>
+    <option correct="false">Reading mistake</option>
+    <option correct="false">Random vibration</option>
+  </question>
+
+  <question>
+    <text>Q47. Parallax error occurs due to</text>
+    <option correct="false">Zero shift</option>
+    <option correct="true">Improper eye position</option>
+    <option correct="false">Temperature change</option>
+    <option correct="false">Instrument wear</option>
+  </question>
+
+  <question>
+    <text>Q48. If basic size of shaft is 50 mm and actual size is 49.96 mm, the deviation from basic size is</text>
+    <option correct="false">+0.04 mm</option>
+    <option correct="true">-0.04 mm</option>
+    <option correct="false">+0.4 mm</option>
+    <option correct="false">-0.4 mm</option>
+  </question>
+
+  <question>
+    <text>Q49. If a 30 H7 hole has upper limit 30.021 mm and lower limit 30.000 mm, the hole tolerance is</text>
+    <option correct="false">0.0021 mm</option>
+    <option correct="true">0.021 mm</option>
+    <option correct="false">0.21 mm</option>
+    <option correct="false">0.21 µm</option>
+  </question>
+
+  <question>
+    <text>Q50. If a shaft is specified as 30 g6 and its limits are 29.97 mm and 29.95 mm, shaft tolerance is</text>
+    <option correct="false">0.01 mm</option>
+    <option correct="false">0.02 mm</option>
+    <option correct="true">0.02 mm</option>
+    <option correct="false">0.2 mm</option>
+  </question>
+
+  <question>
+    <text>Q51. In limit gauging, GO gauge checks</text>
+    <option correct="true">Maximum material condition</option>
+    <option correct="false">Minimum material condition</option>
+    <option correct="false">Average size</option>
+    <option correct="false">Surface finish</option>
+  </question>
+
+  <question>
+    <text>Q52. In limit gauging, NOT GO gauge checks</text>
+    <option correct="false">Maximum material condition</option>
+    <option correct="true">Minimum material condition</option>
+    <option correct="false">Theoretical size</option>
+    <option correct="false">Mean size</option>
+  </question>
+
+  <question>
+    <text>Q53. Maximum material condition for a shaft corresponds to</text>
+    <option correct="true">Upper limit of shaft size</option>
+    <option correct="false">Lower limit of shaft size</option>
+    <option correct="false">Mean size</option>
+    <option correct="false">Basic size</option>
+  </question>
+
+  <question>
+    <text>Q54. Maximum material condition for a hole corresponds to</text>
+    <option correct="false">Upper limit of hole size</option>
+    <option correct="true">Lower limit of hole size</option>
+    <option correct="false">Basic size</option>
+    <option correct="false">Mean size</option>
+  </question>
+
+  <question>
+    <text>Q55. If the lower limit of a hole is 50.00 mm and upper limit is 50.04 mm, maximum clearance with a shaft 49.96–49.92 mm is</text>
+    <option correct="false">0.02 mm</option>
+    <option correct="false">0.04 mm</option>
+    <option correct="true">0.12 mm</option>
+    <option correct="false">0.08 mm</option>
+  </question>
+
+  <question>
+    <text>Q56. For the same hole and shaft in previous question, minimum clearance is</text>
+    <option correct="false">0.00 mm</option>
+    <option correct="false">0.02 mm</option>
+    <option correct="true">0.04 mm</option>
+    <option correct="false">0.08 mm</option>
+  </question>
+
+  <question>
+    <text>Q57. Least count of an instrument is defined as</text>
+    <option correct="true">Smallest value that can be read or measured</option>
+    <option correct="false">Highest value that can be measured</option>
+    <option correct="false">Average of all values</option>
+    <option correct="false">Measurement error</option>
+  </question>
+
+  <question>
+    <text>Q58. Accuracy of measurement means</text>
+    <option correct="true">Closeness to true value</option>
+    <option correct="false">Repeatability of reading</option>
+    <option correct="false">Smallest division on scale</option>
+    <option correct="false">Range of instrument</option>
+  </question>
+
+  <question>
+    <text>Q59. Precision of measurement refers to</text>
+    <option correct="false">Correctness of reading</option>
+    <option correct="true">Repeatability or consistency of reading</option>
+    <option correct="false">Difference from true value</option>
+    <option correct="false">Instrument range</option>
+  </question>
+
+  <question>
+    <text>Q60. If actual diameter is 50.02 mm for a nominal 50 mm shaft, the error of measurement is</text>
+    <option correct="false">+0.2 mm</option>
+    <option correct="true">+0.02 mm</option>
+    <option correct="false">-0.02 mm</option>
+    <option correct="false">+0.002 mm</option>
+  </question>
+
+  <question>
+    <text>Q61. A 0–25 mm micrometer has zero error of -0.01 mm. If reading on work is 12.18 mm, correct size is</text>
+    <option correct="false">12.17 mm</option>
+    <option correct="true">12.19 mm</option>
+    <option correct="false">12.18 mm</option>
+    <option correct="false">12.20 mm</option>
+  </question>
+
+  <question>
+    <text>Q62. Vernier caliper shows 15.40 mm, but has +0.03 mm zero error. Correct size is</text>
+    <option correct="false">15.43 mm</option>
+    <option correct="true">15.37 mm</option>
+    <option correct="false">15.40 mm</option>
+    <option correct="false">15.30 mm</option>
+  </question>
+
+  <question>
+    <text>Q63. Which instrument is most suitable for checking ovality of a shaft?</text>
+    <option correct="false">Steel rule</option>
+    <option correct="true">Dial indicator on V-block</option>
+    <option correct="false">Feeler gauge</option>
+    <option correct="false">Try square</option>
+  </question>
+
+  <question>
+    <text>Q64. Out-of-roundness of a shaft can be best detected by</text>
+    <option correct="false">Micrometer at one position</option>
+    <option correct="true">Rotating shaft and using dial indicator</option>
+    <option correct="false">Using radius gauge</option>
+    <option correct="false">Using slip gauges</option>
+  </question>
+
+  <question>
+    <text>Q65. The process of setting two slip gauges together is called</text>
+    <option correct="true">Wringing</option>
+    <option correct="false">Scraping</option>
+    <option correct="false">Lapping</option>
+    <option correct="false">Facing</option>
+  </question>
+
+  <question>
+    <text>Q66. Micrometer spindle screw usually has pitch</text>
+    <option correct="false">0.25 mm</option>
+    <option correct="true">0.5 mm</option>
+    <option correct="false">1 mm</option>
+    <option correct="false">2 mm</option>
+  </question>
+
+  <question>
+    <text>Q67. Least count of a micrometer with 0.5 mm pitch and 50 divisions on thimble is</text>
+    <option correct="false">0.1 mm</option>
+    <option correct="false">0.05 mm</option>
+    <option correct="true">0.01 mm</option>
+    <option correct="false">0.005 mm</option>
+  </question>
+
+  <question>
+    <text>Q68. Vernier constant is defined as</text>
+    <option correct="true">Difference between one main scale division and one vernier division</option>
+    <option correct="false">Sum of main and vernier divisions</option>
+    <option correct="false">Product of divisions</option>
+    <option correct="false">Main scale division only</option>
+  </question>
+
+  <question>
+    <text>Q69. If 10 vernier divisions coincide with 9 main scale divisions of 1 mm, least count is</text>
+    <option correct="false">0.1 mm</option>
+    <option correct="true">0.1 mm</option>
+    <option correct="false">0.01 mm</option>
+    <option correct="false">0.02 mm</option>
+  </question>
+
+  <question>
+    <text>Q70. The angle of a standard try square should be</text>
+    <option correct="false">80 degrees</option>
+    <option correct="false">85 degrees</option>
+    <option correct="true">90 degrees</option>
+    <option correct="false">95 degrees</option>
+  </question>
+
+  <question>
+    <text>Q71. Bevel protector is used to measure</text>
+    <option correct="false">Linear dimension</option>
+    <option correct="true">Angles</option>
+    <option correct="false">Surface finish</option>
+    <option correct="false">Thread pitch</option>
+  </question>
+
+  <question>
+    <text>Q72. Out of following, which has the least range but highest accuracy?</text>
+    <option correct="false">Vernier caliper</option>
+    <option correct="true">Micrometer</option>
+    <option correct="false">Steel rule</option>
+    <option correct="false">Tape</option>
+  </question>
+
+  <question>
+    <text>Q73. For checking taper of a shaft, best combination is</text>
+    <option correct="false">Steel rule and tape</option>
+    <option correct="true">Dial indicator, sine bar and slip gauges</option>
+    <option correct="false">Only micrometer</option>
+    <option correct="false">Only vernier caliper</option>
+  </question>
+
+  <question>
+    <text>Q74. If a 100 mm gauge block is used with 20 degree C standard, measurement taken at higher temperature will appear</text>
+    <option correct="false">Same</option>
+    <option correct="true">Slightly longer due to expansion</option>
+    <option correct="false">Shorter due to contraction</option>
+    <option correct="false">Unchanged in all cases</option>
+  </question>
+
+  <question>
+    <text>Q75. The term “resolution” of an instrument refers to</text>
+    <option correct="true">Smallest change that produces a detectable output</option>
+    <option correct="false">Largest value it can measure</option>
+    <option correct="false">Average value it measures</option>
+    <option correct="false">Instrument error</option>
+  </question>
+
+  <question>
+    <text>Q76. Which one is NOT a linear measuring instrument?</text>
+    <option correct="false">Steel rule</option>
+    <option correct="false">Micrometer</option>
+    <option correct="true">Protractor</option>
+    <option correct="false">Vernier caliper</option>
+  </question>
+
+  <question>
+    <text>Q77. GO plug gauge corresponds to</text>
+    <option correct="true">Lower limit of hole</option>
+    <option correct="false">Upper limit of hole</option>
+    <option correct="false">Mean size of hole</option>
+    <option correct="false">Basic size of shaft</option>
+  </question>
+
+  <question>
+    <text>Q78. NOT GO plug gauge corresponds to</text>
+    <option correct="false">Lower limit of hole</option>
+    <option correct="true">Upper limit of hole</option>
+    <option correct="false">Mean size of shaft</option>
+    <option correct="false">Basic size of hole</option>
+  </question>
+
+  <question>
+    <text>Q79. GO snap gauge for a shaft corresponds to</text>
+    <option correct="true">Upper limit of shaft</option>
+    <option correct="false">Lower limit of shaft</option>
+    <option correct="false">Mean size</option>
+    <option correct="false">Basic size</option>
+  </question>
+
+  <question>
+    <text>Q80. NOT GO snap gauge for a shaft corresponds to</text>
+    <option correct="false">Upper limit of shaft</option>
+    <option correct="true">Lower limit of shaft</option>
+    <option correct="false">Mean size</option>
+    <option correct="false">Basic size</option>
+  </question>
+
+  <question>
+    <text>Q81. If a dimension is written as 30 +0.03 / -0.01 mm, the mean size is</text>
+    <option correct="false">29.99 mm</option>
+    <option correct="true">30.01 mm</option>
+    <option correct="false">30.03 mm</option>
+    <option correct="false">30.00 mm</option>
+  </question>
+
+  <question>
+    <text>Q82. The tolerance on dimension in previous question is</text>
+    <option correct="false">0.02 mm</option>
+    <option correct="true">0.04 mm</option>
+    <option correct="false">0.03 mm</option>
+    <option correct="false">0.01 mm</option>
+  </question>
+
+  <question>
+    <text>Q83. A 50 H8 hole normally has</text>
+    <option correct="false">Very fine tolerance</option>
+    <option correct="true">Relatively coarse tolerance</option>
+    <option correct="false">No tolerance</option>
+    <option correct="false">Zero deviation</option>
+  </question>
+
+  <question>
+    <text>Q84. For close sliding fits in general engineering, a combination such as</text>
+    <option correct="true">H7 g6</option>
+    <option correct="false">H11 c11</option>
+    <option correct="false">H8 d9</option>
+    <option correct="false">H14 h14</option>
+  </question>
+
+  <question>
+    <text>Q85. Checking a component with GO and NOT GO gauges without noting the actual reading is called</text>
+    <option correct="true">Limit gauging</option>
+    <option correct="false">Direct measurement</option>
+    <option correct="false">Comparative measurement</option>
+    <option correct="false">Calibration</option>
+  </question>
+
+  <question>
+    <text>Q86. In comparative measurement, the component is</text>
+    <option correct="true">Compared with a known standard</option>
+    <option correct="false">Measured directly in millimetres</option>
+    <option correct="false">Checked without any reference</option>
+    <option correct="false">Not measured at all</option>
+  </question>
+
+  <question>
+    <text>Q87. Vernier height gauge is used along with</text>
+    <option correct="true">Surface plate</option>
+    <option correct="false">Lathe bed</option>
+    <option correct="false">Drill press</option>
+    <option correct="false">Welding bench</option>
+  </question>
+
+  <question>
+    <text>Q88. The accuracy of measurement in workshop is ensured by</text>
+    <option correct="false">Using worn-out gauges</option>
+    <option correct="true">Regular calibration of instruments</option>
+    <option correct="false">Avoiding any standards</option>
+    <option correct="false">Using one instrument for all jobs without checking</option>
+  </question>
+
+  <question>
+    <text>Q89. Which measuring instrument is most affected by temperature change?</text>
+    <option correct="false">Steel rule</option>
+    <option correct="false">Micrometer</option>
+    <option correct="true">Slip gauges</option>
+    <option correct="false">Tape</option>
+  </question>
+
+  <question>
+    <text>Q90. For measurement of internal diameter of small bore, the suitable instrument is</text>
+    <option correct="false">Outside micrometer</option>
+    <option correct="true">Inside micrometer or bore gauge</option>
+    <option correct="false">Steel rule</option>
+    <option correct="false">Feeler gauge</option>
+  </question>
+
+  <question>
+    <text>Q91. The abbreviation “µm” stands for</text>
+    <option correct="false">Millimetre</option>
+    <option correct="true">Micrometre</option>
+    <option correct="false">Megametre</option>
+    <option correct="false">Microsecond</option>
+  </question>
+
+  <question>
+    <text>Q92. If 1 µm equals 10⁻⁶ metre, then 0.001 mm equals</text>
+    <option correct="false">1 µm</option>
+    <option correct="true">1 µm</option>
+    <option correct="false">10 µm</option>
+    <option correct="false">100 µm</option>
+  </question>
+
+  <question>
+    <text>Q93. Accuracy class of slip gauges used for calibration work is generally</text>
+    <option correct="true">Higher than workshop gauges</option>
+    <option correct="false">Same as workshop gauges</option>
+    <option correct="false">Lower than workshop gauges</option>
+    <option correct="false">Not specified</option>
+  </question>
+
+  <question>
+    <text>Q94. A 0–25 mm micrometer should not be used to measure</text>
+    <option correct="false">10 mm diameter</option>
+    <option correct="false">20 mm diameter</option>
+    <option correct="true">30 mm diameter</option>
+    <option correct="false">15 mm diameter</option>
+  </question>
+
+  <question>
+    <text>Q95. While measuring with micrometer, ratchet stop is used to</text>
+    <option correct="false">Increase speed</option>
+    <option correct="true">Apply uniform measuring pressure</option>
+    <option correct="false">Lock spindle permanently</option>
+    <option correct="false">Reduce least count</option>
+  </question>
+
+  <question>
+    <text>Q96. The main purpose of providing tolerances on parts is</text>
+    <option correct="true">To permit economical manufacturing</option>
+    <option correct="false">To make drawing complicated</option>
+    <option correct="false">To increase rejection</option>
+    <option correct="false">To avoid interchangeability</option>
+  </question>
+
+  <question>
+    <text>Q97. Interchangeability of parts is achieved mainly by</text>
+    <option correct="true">Proper system of limits and fits</option>
+    <option correct="false">Using only hand fitting</option>
+    <option correct="false">Ignoring tolerances</option>
+    <option correct="false">Using over-sized parts</option>
+  </question>
+
+  <question>
+    <text>Q98. ISO fits are based on</text>
+    <option correct="false">Random selection of tolerance</option>
+    <option correct="true">Standardized tolerance grades and deviations</option>
+    <option correct="false">Only unilateral tolerances</option>
+    <option correct="false">Only interference fits</option>
+  </question>
+
+  <question>
+    <text>Q99. Clearance fit is preferred where</text>
+    <option correct="true">Free relative motion is required</option>
+    <option correct="false">Permanent fastening is needed</option>
+    <option correct="false">High interference is desired</option>
+    <option correct="false">Shrink fitting is necessary</option>
+  </question>
+
+  <question>
+    <text>Q100. Interference fit is used where</text>
+    <option correct="false">Easy assembly and disassembly is required</option>
+    <option correct="true">Permanent rigid joint is required</option>
+    <option correct="false">Loose running fit is needed</option>
+    <option correct="false">Sliding motion is necessary</option>
+  </question>
+
+</quiz>

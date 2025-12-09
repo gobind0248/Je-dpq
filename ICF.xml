@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question>
+    <text>Riding index of ICF coach is</text>
+    <option correct="false">2.75</option>
+    <option correct="true">3.5</option>
+    <option correct="false">4.8</option>
+    <option correct="false">5.8</option>
+  </question>
+
+  <question>
+    <text>Maximum speed of LHB coach is</text>
+    <option correct="false">120 kmph</option>
+    <option correct="true">160 kmph</option>
+    <option correct="false">110 kmph</option>
+    <option correct="false">130 kmph</option>
+  </question>
+
+  <!-- Add more <question>...</question> blocks -->
+</quiz>

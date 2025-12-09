@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question>
+    <text>Q1. 1 metre is equal to how many millimetres?</text>
+    <option correct="false">10 mm</option>
+    <option correct="false">100 mm</option>
+    <option correct="true">1000 mm</option>
+    <option correct="false">10 000 mm</option>
+  </question>
+
+  <question>
+    <text>Q2. 1 centimetre is equal to</text>
+    <option correct="false">0.1 mm</option>
+    <option correct="true">10 mm</option>
+    <option correct="false">100 mm</option>
+    <option correct="false">1000 mm</option>
+  </question>
+
+  <question>
+    <text>Q3. 1 square metre is equal to how many square centimetres?</text>
+    <option correct="false">10 cm²</option>
+    <option correct="false">100 cm²</option>
+    <option correct="true">10 000 cm²</option>
+    <option correct="false">100 000 cm²</option>
+  </question>
+
+  <question>
+    <text>Q4. 1 cubic metre is equal to</text>
+    <option correct="false">10 cm³</option>
+    <option correct="false">1000 cm³</option>
+    <option correct="false">10 000 cm³</option>
+    <option correct="true">10 00 000 cm³</option>
+  </question>
+
+  <question>
+    <text>Q5. 1 litre is equal to how many cubic centimetres?</text>
+    <option correct="false">10 cm³</option>
+    <option correct="false">100 cm³</option>
+    <option correct="true">1000 cm³</option>
+    <option correct="false">10 000 cm³</option>
+  </question>
+
+  <question>
+    <text>Q6. 500 millimetres is equal to</text>
+    <option correct="false">0.05 m</option>
+    <option correct="true">0.5 m</option>
+    <option correct="false">5 m</option>
+    <option correct="false">50 m</option>
+  </question>
+
+  <question>
+    <text>Q7. 2.5 metres is equal to how many centimetres?</text>
+    <option correct="false">25 cm</option>
+    <option correct="true">250 cm</option>
+    <option correct="false">2500 cm</option>
+    <option correct="false">25 000 cm</option>
+  </question>
+
+  <question>
+    <text>Q8. 750 millilitres of oil is equal to</text>
+    <option correct="false">0.075 litre</option>
+    <option correct="false">0.5 litre</option>
+    <option correct="true">0.75 litre</option>
+    <option correct="false">1.75 litre</option>
+  </question>
+
+  <question>
+    <text>Q9. 0.02 metres is equal to how many millimetres?</text>
+    <option correct="true">20 mm</option>
+    <option correct="false">2 mm</option>
+    <option correct="false">200 mm</option>
+    <option correct="false">0.2 mm</option>
+  </question>
+
+  <question>
+    <text>Q10. 3.5 metres is equal to</text>
+    <option correct="false">35 cm</option>
+    <option correct="false">0.35 cm</option>
+    <option correct="true">350 cm</option>
+    <option correct="false">3500 cm</option>
+  </question>
+
+  <question>
+    <text>Q11. The area of a rectangle with length 5 m and breadth 3 m is</text>
+    <option correct="false">8 m²</option>
+    <option correct="true">15 m²</option>
+    <option correct="false">30 m²</option>
+    <option correct="false">45 m²</option>
+  </question>
+
+  <question>
+    <text>Q12. The area of a square plate of side 4 m is</text>
+    <option correct="false">8 m²</option>
+    <option correct="false">12 m²</option>
+    <option correct="true">16 m²</option>
+    <option correct="false">20 m²</option>
+  </question>
+
+  <question>
+    <text>Q13. The area of a triangle with base 6 m and height 4 m is</text>
+    <option correct="true">12 m²</option>
+    <option correct="false">24 m²</option>
+    <option correct="false">10 m²</option>
+    <option correct="false">6 m²</option>
+  </question>
+
+  <question>
+    <text>Q14. The area of a circle of radius 7 cm (take π = 22/7) is</text>
+    <option correct="false">22 cm²</option>
+    <option correct="false">77 cm²</option>
+    <option correct="true">154 cm²</option>
+    <option correct="false">308 cm²</option>
+  </question>
+
+  <question>
+    <text>Q15. A rectangular sheet has length 2.5 m and breadth 1.2 m. Its area is</text>
+    <option correct="false">2.7 m²</option>
+    <option correct="true">3.0 m²</option>
+    <option correct="false">3.5 m²</option>
+    <option correct="false">4.0 m²</option>
+  </question>
+
+  <question>
+    <text>Q16. If radius of a circular plate is doubled, its area becomes</text>
+    <option correct="false">Half</option>
+    <option correct="false">Same</option>
+    <option correct="true">Four times</option>
+    <option correct="false">Eight times</option>
+  </question>
+
+  <question>
+    <text>Q17. A rectangular floor is 10 m long and 6 m wide. How many square metres of tiles are needed?</text>
+    <option correct="false">16 m²</option>
+    <option correct="false">40 m²</option>
+    <option correct="true">60 m²</option>
+    <option correct="false">80 m²</option>
+  </question>
+
+  <question>
+    <text>Q18. The breadth of a rectangle is 4 m and area is 32 m². Its length is</text>
+    <option correct="true">8 m</option>
+    <option correct="false">6 m</option>
+    <option correct="false">10 m</option>
+    <option correct="false">12 m</option>
+  </question>
+
+  <question>
+    <text>Q19. The radius of a circle is 14 cm. Its diameter is</text>
+    <option correct="false">7 cm</option>
+    <option correct="true">28 cm</option>
+    <option correct="false">21 cm</option>
+    <option correct="false">14 cm</option>
+  </question>
+
+  <question>
+    <text>Q20. Length and breadth of a rectangular plate are 150 cm and 80 cm. Its area in square metres is</text>
+    <option correct="false">0.8 m²</option>
+    <option correct="false">1.0 m²</option>
+    <option correct="true">1.2 m²</option>
+    <option correct="false">12 m²</option>
+  </question>
+
+  <question>
+    <text>Q21. Volume of a cube of side 5 cm is</text>
+    <option correct="false">25 cm³</option>
+    <option correct="false">75 cm³</option>
+    <option correct="true">125 cm³</option>
+    <option correct="false">150 cm³</option>
+  </question>
+
+  <question>
+    <text>Q22. Volume of a cuboid with length 4 m, breadth 3 m and height 2 m is</text>
+    <option correct="false">9 m³</option>
+    <option correct="false">12 m³</option>
+    <option correct="true">24 m³</option>
+    <option correct="false">48 m³</option>
+  </question>
+
+  <question>
+    <text>Q23. The volume of a cylinder of radius 0.5 m and height 2 m (π = 3.14) is approximately</text>
+    <option correct="false">0.5 m³</option>
+    <option correct="true">1.57 m³</option>
+    <option correct="false">3.14 m³</option>
+    <option correct="false">6.28 m³</option>
+  </question>
+
+  <question>
+    <text>Q24. A tank 4 m long, 3 m wide and 2 m deep has capacity</text>
+    <option correct="false">12 m³</option>
+    <option correct="true">24 m³</option>
+    <option correct="false">18 m³</option>
+    <option correct="false">30 m³</option>
+  </question>
+
+  <question>
+    <text>Q25. A cube has volume 216 cm³. Length of its side is</text>
+    <option correct="false">4 cm</option>
+    <option correct="true">6 cm</option>
+    <option correct="false">8 cm</option>
+    <option correct="false">9 cm</option>
+  </question>
+
+  <question>
+    <text>Q26. The volume of a cylinder when radius is doubled and height is same becomes</text>
+    <option correct="false">Half</option>
+    <option correct="false">Same</option>
+    <option correct="true">Four times</option>
+    <option correct="false">Eight times</option>
+  </question>
+
+  <question>
+    <text>Q27. Volume of a cuboid is 60 m³. Its length is 5 m and breadth is 3 m. Height is</text>
+    <option correct="false">2 m</option>
+    <option correct="true">4 m</option>
+    <option correct="false">5 m</option>
+    <option correct="false">6 m</option>
+  </question>
+
+  <question>
+    <text>Q28. An oil drum is cylindrical. Its volume is primarily determined by</text>
+    <option correct="false">Surface area</option>
+    <option correct="true">Base area and height</option>
+    <option correct="false">Weight of drum</option>
+    <option correct="false">Diameter only</option>
+  </question>
+
+  <question>
+    <text>Q29. A cylinder of radius 10 cm and height 50 cm has volume (π = 3.14)</text>
+    <option correct="false">1570 cm³</option>
+    <option correct="false">3140 cm³</option>
+    <option correct="true">15 700 cm³</option>
+    <option correct="false">31 400 cm³</option>
+  </question>
+
+  <question>
+    <text>Q30. Volume of a cube changes how many times if its side is tripled?</text>
+    <option correct="false">3 times</option>
+    <option correct="false">6 times</option>
+    <option correct="false">9 times</option>
+    <option correct="true">27 times</option>
+  </question>
+
+  <question>
+    <text>Q31. 25 percent of 200 is</text>
+    <option correct="false">25</option>
+    <option correct="true">50</option>
+    <option correct="false">75</option>
+    <option correct="false">100</option>
+  </question>
+
+  <question>
+    <text>Q32. 40 percent of 500 kg of material is rejected as scrap. Accepted material is</text>
+    <option correct="false">100 kg</option>
+    <option correct="false">200 kg</option>
+    <option correct="true">300 kg</option>
+    <option correct="false">400 kg</option>
+  </question>
+
+  <question>
+    <text>Q33. If the cost of a component increases from Rs. 80 to Rs. 100, the percentage increase is</text>
+    <option correct="false">10 percent</option>
+    <option correct="true">25 percent</option>
+    <option correct="false">30 percent</option>
+    <option correct="false">40 percent</option>
+  </question>
+
+  <question>
+    <text>Q34. 15 percent of 960 is</text>
+    <option correct="false">96</option>
+    <option correct="true">144</option>
+    <option correct="false">160</option>
+    <option correct="false">180</option>
+  </question>
+
+  <question>
+    <text>Q35. A casting weighs 12 kg. During machining 25 percent material is removed. Final weight is</text>
+    <option correct="false">3 kg</option>
+    <option correct="false">6 kg</option>
+    <option correct="false">8 kg</option>
+    <option correct="true">9 kg</option>
+  </question>
+
+  <question>
+    <text>Q36. If a worker completes 80 percent of a job, the remaining work is</text>
+    <option correct="false">10 percent</option>
+    <option correct="false">15 percent</option>
+    <option correct="true">20 percent</option>
+    <option correct="false">25 percent</option>
+  </question>
+
+  <question>
+    <text>Q37. 5 percent of 1 000 litres of oil is lost due to leakage. Quantity lost is</text>
+    <option correct="true">50 litres</option>
+    <option correct="false">5 litres</option>
+    <option correct="false">10 litres</option>
+    <option correct="false">100 litres</option>
+  </question>
+
+  <question>
+    <text>Q38. 2 percent of 2 500 is</text>
+    <option correct="false">25</option>
+    <option correct="true">50</option>
+    <option correct="false">75</option>
+    <option correct="false">100</option>
+  </question>
+
+  <question>
+    <text>Q39. If efficiency of a machine improves from 60 percent to 75 percent, the increase is</text>
+    <option correct="false">10 percent</option>
+    <option correct="false">20 percent</option>
+    <option correct="true">15 percentage points</option>
+    <option correct="false">25 percent</option>
+  </question>
+
+  <question>
+    <text>Q40. A batch of 400 parts has 5 percent defective. Number of defective parts is</text>
+    <option correct="false">15</option>
+    <option correct="true">20</option>
+    <option correct="false">25</option>
+    <option correct="false">30</option>
+  </question>
+
+  <question>
+    <text>Q41. The ratio 2:3 expressed as percentage of the first term to total is</text>
+    <option correct="false">20 percent</option>
+    <option correct="true">40 percent</option>
+    <option correct="false">50 percent</option>
+    <option correct="false">60 percent</option>
+  </question>
+
+  <question>
+    <text>Q42. The ratio 4:5 is equivalent to</text>
+    <option correct="false">8:9</option>
+    <option correct="false">12:20</option>
+    <option correct="true">16:20</option>
+    <option correct="false">20:16</option>
+  </question>
+
+  <question>
+    <text>Q43. If 3 workers finish a job in 6 days, assuming equal work, one worker alone will take</text>
+    <option correct="false">2 days</option>
+    <option correct="false">6 days</option>
+    <option correct="false">9 days</option>
+    <option correct="true">18 days</option>
+  </question>
+
+  <question>
+    <text>Q44. Two pipes fill a tank in 12 hours and 8 hours respectively. Together they fill it in</text>
+    <option correct="false">4 hours</option>
+    <option correct="true">4.8 hours</option>
+    <option correct="false">5 hours</option>
+    <option correct="false">6 hours</option>
+  </question>
+
+  <question>
+    <text>Q45. A job requires 60 man-hours. If 5 workers are employed, job will be finished in</text>
+    <option correct="true">12 hours</option>
+    <option correct="false">10 hours</option>
+    <option correct="false">15 hours</option>
+    <option correct="false">20 hours</option>
+  </question>
+
+  <question>
+    <text>Q46. In a workshop, ratio of skilled to unskilled workers is 3:2. Total workers are 50. Skilled workers are</text>
+    <option correct="false">15</option>
+    <option correct="false">20</option>
+    <option correct="true">30</option>
+    <option correct="false">35</option>
+  </question>
+
+  <question>
+    <text>Q47. 12 is what percent of 48?</text>
+    <option correct="false">10 percent</option>
+    <option correct="true">25 percent</option>
+    <option correct="false">30 percent</option>
+    <option correct="false">40 percent</option>
+  </question>
+
+  <question>
+    <text>Q48. In a mixture of oil and kerosene, ratio is 7:3. Percentage of kerosene is</text>
+    <option correct="false">20 percent</option>
+    <option correct="false">25 percent</option>
+    <option correct="true">30 percent</option>
+    <option correct="false">70 percent</option>
+  </question>
+
+  <question>
+    <text>Q49. If wages are increased from Rs. 400 per day to Rs. 460 per day, percentage increase is</text>
+    <option correct="false">10 percent</option>
+    <option correct="true">15 percent</option>
+    <option correct="false">20 percent</option>
+    <option correct="false">25 percent</option>
+  </question>
+
+  <question>
+    <text>Q50. The time taken by a worker to complete a job is inversely proportional to</text>
+    <option correct="false">His daily wage</option>
+    <option correct="true">His rate of working</option>
+    <option correct="false">Number of holidays</option>
+    <option correct="false">Tool cost</option>
+  </question>
+
+  <question>
+    <text>Q51. A rectangular steel plate is 2 m by 1.5 m. If 10 such plates are required, total area is</text>
+    <option correct="false">15 m²</option>
+    <option correct="true">30 m²</option>
+    <option correct="false">25 m²</option>
+    <option correct="false">20 m²</option>
+  </question>
+
+  <question>
+    <text>Q52. A floor of area 45 m² is to be painted. If 1 litre of paint covers 5 m², required paint is</text>
+    <option correct="false">5 litres</option>
+    <option correct="false">7 litres</option>
+    <option correct="true">9 litres</option>
+    <option correct="false">10 litres</option>
+  </question>
+
+  <question>
+    <text>Q53. A circular manhole cover has diameter 1 m. Its area is approximately (π = 3.14)</text>
+    <option correct="false">0.25 m²</option>
+    <option correct="false">0.5 m²</option>
+    <option correct="true">0.785 m²</option>
+    <option correct="false">1.5 m²</option>
+  </question>
+
+  <question>
+    <text>Q54. The area of a triangle is 30 m² and its base is 10 m. Height is</text>
+    <option correct="false">3 m</option>
+    <option correct="true">6 m</option>
+    <option correct="false">10 m</option>
+    <option correct="false">12 m</option>
+  </question>
+
+  <question>
+    <text>Q55. A tank has dimensions 3 m × 2 m × 1.5 m. Its capacity in litres is</text>
+    <option correct="false">900 litres</option>
+    <option correct="false">1 500 litres</option>
+    <option correct="true">9 000 litres</option>
+    <option correct="false">90 000 litres</option>
+  </question>
+
+  <question>
+    <text>Q56. A cube has surface area 150 cm². Each face has area 25 cm². Side length is</text>
+    <option correct="false">3 cm</option>
+    <option correct="true">5 cm</option>
+    <option correct="false">6 cm</option>
+    <option correct="false">10 cm</option>
+  </question>
+
+  <question>
+    <text>Q57. 1 percent is equal to</text>
+    <option correct="false">1/10</option>
+    <option correct="false">1/50</option>
+    <option correct="true">1/100</option>
+    <option correct="false">1/1000</option>
+  </question>
+
+  <question>
+    <text>Q58. 0.75 expressed as percentage is</text>
+    <option correct="false">7.5 percent</option>
+    <option correct="false">50 percent</option>
+    <option correct="true">75 percent</option>
+    <option correct="false">100 percent</option>
+  </question>
+
+  <question>
+    <text>Q59. 30 percent of a number is 45. The number is</text>
+    <option correct="false">100</option>
+    <option correct="true">150</option>
+    <option correct="false">135</option>
+    <option correct="false">200</option>
+  </question>
+
+  <question>
+    <text>Q60. If a machine produces 160 parts in 8 hours, its production rate is</text>
+    <option correct="false">10 parts per hour</option>
+    <option correct="true">20 parts per hour</option>
+    <option correct="false">30 parts per hour</option>
+    <option correct="false">40 parts per hour</option>
+  </question>
+
+  <question>
+    <text>Q61. A workshop consumes 240 units of power in a day. If consumption is reduced by 25 percent, new consumption is</text>
+    <option correct="false">120 units</option>
+    <option correct="true">180 units</option>
+    <option correct="false">200 units</option>
+    <option correct="false">220 units</option>
+  </question>
+
+  <question>
+    <text>Q62. The length of a bar is measured as 1.248 m. Rounded off to nearest millimetre it is</text>
+    <option correct="false">1 240 mm</option>
+    <option correct="true">1 248 mm</option>
+    <option correct="false">1 250 mm</option>
+    <option correct="false">1 200 mm</option>
+  </question>
+
+  <question>
+    <text>Q63. A drawing scale is 1:20. A length of 5 cm on drawing represents</text>
+    <option correct="false">1 m</option>
+    <option correct="true">1 m</option>
+    <option correct="false">10 m</option>
+    <option correct="false">20 m</option>
+  </question>
+
+  <question>
+    <text>Q64. A shaft is 1.5 m long. In millimetres it is</text>
+    <option correct="false">15 mm</option>
+    <option correct="false">150 mm</option>
+    <option correct="true">1500 mm</option>
+    <option correct="false">15 000 mm</option>
+  </question>
+
+  <question>
+    <text>Q65. A tank contains 3.6 m³ of water. How many litres is this?</text>
+    <option correct="false">360 litres</option>
+    <option correct="false">3600 litres</option>
+    <option correct="true">3600 litres</option>
+    <option correct="false">36 000 litres</option>
+  </question>
+
+  <question>
+    <text>Q66. 2.5 km is equal to how many metres?</text>
+    <option correct="false">25 m</option>
+    <option correct="false">250 m</option>
+    <option correct="true">2500 m</option>
+    <option correct="false">25 000 m</option>
+  </question>
+
+  <question>
+    <text>Q67. 1 hectare is equal to</text>
+    <option correct="false">100 m²</option>
+    <option correct="false">1000 m²</option>
+    <option correct="true">10 000 m²</option>
+    <option correct="false">1 00 000 m²</option>
+  </question>
+
+  <question>
+    <text>Q68. A rectangular park is 60 m long and 40 m wide. Its area in hectares is</text>
+    <option correct="false">0.12 ha</option>
+    <option correct="true">0.24 ha</option>
+    <option correct="false">0.6 ha</option>
+    <option correct="false">2.4 ha</option>
+  </question>
+
+  <question>
+    <text>Q69. A cylindrical rod has radius 2 cm and length 50 cm. Its volume (π = 3.14) is approximately</text>
+    <option correct="false">314 cm³</option>
+    <option correct="false">400 cm³</option>
+    <option correct="true">628 cm³</option>
+    <option correct="false">1256 cm³</option>
+  </question>
+
+  <question>
+    <text>Q70. 1 cubic centimetre is equal to</text>
+    <option correct="false">0.01 litre</option>
+    <option correct="true">0.001 litre</option>
+    <option correct="false">0.1 litre</option>
+    <option correct="false">1 litre</option>
+  </question>
+
+  <question>
+    <text>Q71. If 12 out of 80 students are absent, percentage of absent students is</text>
+    <option correct="false">10 percent</option>
+    <option correct="false">12 percent</option>
+    <option correct="true">15 percent</option>
+    <option correct="false">20 percent</option>
+  </question>
+
+  <question>
+    <text>Q72. 3 hours 30 minutes expressed in hours is</text>
+    <option correct="false">3.15 h</option>
+    <option correct="true">3.5 h</option>
+    <option correct="false">3.25 h</option>
+    <option correct="false">3.75 h</option>
+  </question>
+
+  <question>
+    <text>Q73. A lathe produces 24 components in 3 hours. At the same rate, components produced in 8 hours will be</text>
+    <option correct="false">48</option>
+    <option correct="false">56</option>
+    <option correct="true">64</option>
+    <option correct="false">72</option>
+  </question>
+
+  <question>
+    <text>Q74. A bar of length 2 m is cut into 8 equal pieces. Length of each piece is</text>
+    <option correct="false">10 cm</option>
+    <option correct="false">15 cm</option>
+    <option correct="true">25 cm</option>
+    <option correct="false">50 cm</option>
+  </question>
+
+  <question>
+    <text>Q75. The average of 12, 16 and 20 is</text>
+    <option correct="false">14</option>
+    <option correct="true">16</option>
+    <option correct="false">18</option>
+    <option correct="false">20</option>
+  </question>
+
+  <question>
+    <text>Q76. Sum of angles of a triangle is</text>
+    <option correct="false">90 degrees</option>
+    <option correct="false">180 radians</option>
+    <option correct="true">180 degrees</option>
+    <option correct="false">360 degrees</option>
+  </question>
+
+  <question>
+    <text>Q77. The diagonal of a rectangle is longest when</text>
+    <option correct="false">Rectangle is a square</option>
+    <option correct="true">Compared to length and breadth</option>
+    <option correct="false">Breadth is zero</option>
+    <option correct="false">Length is zero</option>
+  </question>
+
+  <question>
+    <text>Q78. A discount of 10 percent on Rs. 2000 gives reduction of</text>
+    <option correct="false">Rs. 100</option>
+    <option correct="true">Rs. 200</option>
+    <option correct="false">Rs. 250</option>
+    <option correct="false">Rs. 300</option>
+  </question>
+
+  <question>
+    <text>Q79. Selling price of an item is Rs. 1150 and cost price is Rs. 1000. Profit percent is</text>
+    <option correct="false">5 percent</option>
+    <option correct="false">10 percent</option>
+    <option correct="true">15 percent</option>
+    <option correct="false">20 percent</option>
+  </question>
+
+  <question>
+    <text>Q80. Cost price of a tool is Rs. 800. It is sold at 20 percent loss. Selling price is</text>
+    <option correct="false">Rs. 600</option>
+    <option correct="true">Rs. 640</option>
+    <option correct="false">Rs. 700</option>
+    <option correct="false">Rs. 720</option>
+  </question>
+
+  <question>
+    <text>Q81. If in a job, material cost is Rs. 500, labour cost is Rs. 300 and overhead is Rs. 200, then material cost percentage is</text>
+    <option correct="false">30 percent</option>
+    <option correct="true">50 percent</option>
+    <option correct="false">60 percent</option>
+    <option correct="false">70 percent</option>
+  </question>
+
+  <question>
+    <text>Q82. A rod expands 1 percent of its length when heated. For 2 m rod, increase in length is</text>
+    <option correct="false">0.02 m</option>
+    <option correct="true">0.02 m</option>
+    <option correct="false">0.2 m</option>
+    <option correct="false">2 m</option>
+  </question>
+
+  <question>
+    <text>Q83. A machine is operated 6 hours per day for 25 days. Total operating hours are</text>
+    <option correct="false">120 h</option>
+    <option correct="true">150 h</option>
+    <option correct="false">160 h</option>
+    <option correct="false">180 h</option>
+  </question>
+
+  <question>
+    <text>Q84. If 5 machines can complete a work in 16 days, then 10 similar machines will complete it in</text>
+    <option correct="false">8 days</option>
+    <option correct="true">8 days</option>
+    <option correct="false">10 days</option>
+    <option correct="false">20 days</option>
+  </question>
+
+  <question>
+    <text>Q85. A cylindrical bar has diameter 10 cm and length 1 m. Radius in metres is</text>
+    <option correct="false">0.1 m</option>
+    <option correct="true">0.05 m</option>
+    <option correct="false">0.005 m</option>
+    <option correct="false">1 m</option>
+  </question>
+
+  <question>
+    <text>Q86. 1 kilogram per cubic metre is equal to</text>
+    <option correct="false">0.1 gram per cubic centimetre</option>
+    <option correct="true">0.001 gram per cubic centimetre</option>
+    <option correct="false">0.01 gram per cubic centimetre</option>
+    <option correct="false">1 gram per cubic centimetre</option>
+  </question>
+
+  <question>
+    <text>Q87. A worker is paid Rs. 480 for 8 hours of work. His hourly wage is</text>
+    <option correct="false">Rs. 40</option>
+    <option correct="true">Rs. 60</option>
+    <option correct="false">Rs. 80</option>
+    <option correct="false">Rs. 100</option>
+  </question>
+
+  <question>
+    <text>Q88. If 12 parts weigh 9.6 kg, average weight per part is</text>
+    <option correct="false">0.6 kg</option>
+    <option correct="true">0.8 kg</option>
+    <option correct="false">0.9 kg</option>
+    <option correct="false">1.2 kg</option>
+  </question>
+
+  <question>
+    <text>Q89. The perimeter of a square plate is 40 cm. Its side is</text>
+    <option correct="false">5 cm</option>
+    <option correct="true">10 cm</option>
+    <option correct="false">15 cm</option>
+    <option correct="false">20 cm</option>
+  </question>
+
+  <question>
+    <text>Q90. A rectangular plot has perimeter 70 m and breadth 15 m. Length is</text>
+    <option correct="false">10 m</option>
+    <option correct="false">15 m</option>
+    <option correct="true">20 m</option>
+    <option correct="false">25 m</option>
+  </question>
+
+  <question>
+    <text>Q91. 3.6 kilometres per hour is equal to</text>
+    <option correct="false">0.5 m per second</option>
+    <option correct="true">1 m per second</option>
+    <option correct="false">1.5 m per second</option>
+    <option correct="false">2 m per second</option>
+  </question>
+
+  <question>
+    <text>Q92. 72 kilometres per hour is equal to</text>
+    <option correct="false">10 m per second</option>
+    <option correct="true">20 m per second</option>
+    <option correct="false">25 m per second</option>
+    <option correct="false">30 m per second</option>
+  </question>
+
+  <question>
+    <text>Q93. A workshop uses 250 kg of steel every day. Steel required for 12 days is</text>
+    <option correct="false">2500 kg</option>
+    <option correct="true">3000 kg</option>
+    <option correct="false">3500 kg</option>
+    <option correct="false">4000 kg</option>
+  </question>
+
+  <question>
+    <text>Q94. If 8 metres of wire weigh 1.6 kg, weight of 5 metres of same wire is</text>
+    <option correct="false">0.5 kg</option>
+    <option correct="true">1 kg</option>
+    <option correct="false">1.2 kg</option>
+    <option correct="false">1.6 kg</option>
+  </question>
+
+  <question>
+    <text>Q95. A steel bar is 3.75 m long. Expressed in centimetres it is</text>
+    <option correct="false">37.5 cm</option>
+    <option correct="false">375 cm</option>
+    <option correct="true">375 cm</option>
+    <option correct="false">300 cm</option>
+  </question>
+
+  <question>
+    <text>Q96. 9 months is what fraction of a year?</text>
+    <option correct="false">1/2</option>
+    <option correct="true">3/4</option>
+    <option correct="false">2/3</option>
+    <option correct="false">5/6</option>
+  </question>
+
+  <question>
+    <text>Q97. Speed is equal to</text>
+    <option correct="false">Distance × time</option>
+    <option correct="true">Distance divided by time</option>
+    <option correct="false">Time divided by distance</option>
+    <option correct="false">Distance squared</option>
+  </question>
+
+  <question>
+    <text>Q98. Density is equal to</text>
+    <option correct="false">Mass × volume</option>
+    <option correct="true">Mass divided by volume</option>
+    <option correct="false">Volume divided by mass</option>
+    <option correct="false">Mass only</option>
+  </question>
+
+  <question>
+    <text>Q99. If density of oil is 0.8 gram per cubic centimetre, mass of 1000 cubic centimetres of oil is</text>
+    <option correct="false">0.8 gram</option>
+    <option correct="false">80 gram</option>
+    <option correct="true">800 gram</option>
+    <option correct="false">8000 gram</option>
+  </question>
+
+  <question>
+    <text>Q100. When both length and breadth of a rectangle are doubled, its area becomes</text>
+    <option correct="false">Twice</option>
+    <option correct="false">Three times</option>
+    <option correct="true">Four times</option>
+    <option correct="false">Eight times</option>
+  </question>
+
+</quiz>

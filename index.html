@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>C&W JE / LDCE Offline MCQ Practice - Local XML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .quiz-container {
+      background: #020617;
+      border-radius: 18px;
+      padding: 20px 22px;
+      max-width: 720px;
+      width: 100%;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .subtitle {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 2px;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.1);
+      color: #93c5fd;
+      border: 1px solid rgba(37, 99, 235, 0.5);
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .topic-row {
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .topic-row label {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .topic-select {
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: 999px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      min-width: 220px;
+    }
+
+    .start-btn {
+      border-radius: 999px;
+      border: none;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+    }
+
+    .start-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.5);
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #cbd5f5;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .toggle-row input {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .progress {
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: #111827;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(to right, #22c55e, #3b82f6);
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: #020617;
+      border-radius: 14px;
+      padding: 14px 14px 10px;
+      border: 1px solid rgba(75, 85, 99, 0.7);
+      margin-bottom: 16px;
+      min-height: 140px;
+    }
+
+    .question-text {
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #f9fafb;
+      line-height: 1.5;
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .option {
+      border-radius: 12px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 8px 9px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+      font-size: 0.92rem;
+      color: #e5e7eb;
+    }
+
+    .option:hover {
+      background: rgba(31, 41, 55, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .option input {
+      cursor: pointer;
+      accent-color: #3b82f6;
+    }
+
+    .option.correct {
+      background: rgba(22, 163, 74, 0.18);
+      border-color: #22c55e;
+    }
+
+    .option.incorrect {
+      background: rgba(220, 38, 38, 0.12);
+      border-color: #f97373;
+    }
+
+    .option.disabled {
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .feedback {
+      min-height: 22px;
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    .feedback.correct {
+      color: #22c55e;
+    }
+
+    .feedback.incorrect {
+      color: #fb7185;
+    }
+
+    /* MODIFIED CONTROLS SECTION */
+    .controls {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .finish-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    button {
+      transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.1s ease;
+      min-width: 140px; /* Ensures all buttons have similar width */
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #submit-btn {
+      background: linear-gradient(to right, #22c55e, #16a34a);
+      color: white;
+      box-shadow: 0 8px 18px rgba(34, 197, 94, 0.4);
+    }
+
+    #submit-btn:hover:enabled {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(34, 197, 94, 0.5);
+    }
+
+    #submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #next-btn {
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+    }
+
+    #next-btn:hover:enabled {
+      background: #111827;
+    }
+
+    #next-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #finish-btn {
+      background: #4b5563;
+      color: #e5e7eb;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      min-width: 180px; /* Slightly wider for better visual balance */
+    }
+
+    #finish-btn:hover:enabled {
+      background: #374151;
+    }
+
+    #finish-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .score-box {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .final-score {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.8);
+      font-size: 0.95rem;
+    }
+
+    .final-score strong {
+      color: #22c55e;
+    }
+
+    /* Restart button inside final score */
+    #restart-btn {
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .quiz-container {
+        margin: 10px;
+      }
+      
+      .top-controls {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      button {
+        width: 100%;
+      }
+      
+      #submit-btn, #next-btn {
+        min-width: 100%;
+      }
+      
+      #finish-btn {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <div>
+        <div class="title">JE-DPQ / LDCE (MCQ Practice)</div>
+        <div class="subtitle"> • Created by Gobind Sharma</div>
+      </div>
+      <div class="badge" id="current-topic-badge">No topic loaded</div>
+    </div>
+
+    <div class="topic-row">
+      <label for="topic-select">Topic:</label>
+      <select id="topic-select" class="topic-select">
+        <option value="">-- Loading topics from topics.json --</option>
+      </select>
+      <button class="start-btn" id="start-btn">Load Topic</button>
+    </div>
+
+    <div class="toggle-row">
+      <input type="checkbox" id="random-toggle" checked />
+      <label for="random-toggle">Randomize questions & options</label>
+    </div>
+
+    <div class="progress">
+      <div id="question-counter">Choose a topic and click Load Topic</div>
+      <div class="progress-bar">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+      <div id="score-mini">Score: 0</div>
+    </div>
+
+    <div class="question-box">
+      <div id="question-text" class="question-text">
+        Waiting for topic…
+      </div>
+      <ul id="options-list" class="options"></ul>
+      <div id="feedback" class="feedback"></div>
+    </div>
+
+    <!-- MODIFIED CONTROLS LAYOUT -->
+    <div class="controls">
+      <div class="top-controls">
+        <button id="submit-btn" disabled>Submit</button>
+        <button id="next-btn" disabled>Next / Skip ➜</button>
+      </div>
+      <div class="finish-controls">
+        <button id="finish-btn" disabled>Finish</button>
+      </div>
+    </div>
+
+    <div class="score-box">
+      <div id="final-score" class="final-score" style="display:none;"></div>
+    </div>
+  </div>
+
+  <script>
+    let questions = [];
+    let currentIndex = 0;
+    let score = 0;
+    let hasAnswered = false;
+    let questionsLoaded = false;
+    let attempted = 0; // counts how many questions were actually submitted
+
+    const topicSelectEl     = document.getElementById("topic-select");
+    const startBtnEl        = document.getElementById("start-btn");
+    const randomToggleEl    = document.getElementById("random-toggle");
+    const topicBadgeEl      = document.getElementById("current-topic-badge");
+
+    const questionTextEl    = document.getElementById("question-text");
+    const optionsListEl     = document.getElementById("options-list");
+    const feedbackEl        = document.getElementById("feedback");
+    const submitBtn         = document.getElementById("submit-btn");
+    const nextBtn           = document.getElementById("next-btn");
+    const finishBtn         = document.getElementById("finish-btn");
+    const questionCounterEl = document.getElementById("question-counter");
+    const progressBarFillEl = document.getElementById("progress-bar-fill");
+    const scoreMiniEl       = document.getElementById("score-mini");
+    const finalScoreEl      = document.getElementById("final-score");
+
+    // -------- Helpers --------
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    function parseXMLToQuestions(xmlText) {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+      const qNodes = xmlDoc.getElementsByTagName("question");
+      const out = [];
+
+      for (let i = 0; i < qNodes.length; i++) {
+        const qNode = qNodes[i];
+        const textNode = qNode.getElementsByTagName("text")[0];
+        if (!textNode) continue;
+
+        const qText = textNode.textContent.trim();
+        const optNodes = qNode.getElementsByTagName("option");
+        if (optNodes.length < 2) continue;
+
+        const options = [];
+        let correctIndex = 0;
+
+        for (let j = 0; j < optNodes.length; j++) {
+          const optNode = optNodes[j];
+          const optText = optNode.textContent.trim();
+          const isCorrect = optNode.getAttribute("correct") === "true";
+          options.push(optText);
+          if (isCorrect) correctIndex = j;
+        }
+
+        out.push({
+          question: qText,
+          options,
+          correctIndex
+        });
+      }
+      return out;
+    }
+
+    function prepareQuestionBank(rawQuestions, randomize) {
+      const qs = rawQuestions.map(q => ({
+        question: q.question,
+        options: [...q.options],
+        correctIndex: q.correctIndex
+      }));
+
+      if (randomize) {
+        shuffleArray(qs);
+        qs.forEach(q => {
+          const idxs = q.options.map((_, idx) => idx);
+          shuffleArray(idxs);
+          const newOptions = idxs.map(i => q.options[i]);
+          const newCorrectIndex = idxs.indexOf(q.correctIndex);
+          q.options = newOptions;
+          q.correctIndex = newCorrectIndex;
+        });
+      }
+
+      return qs;
+    }
+
+    // -------- UI --------
+    function renderQuestion() {
+      if (!questionsLoaded || questions.length === 0) {
+        questionTextEl.textContent = "No questions available. Check your XML file.";
+        optionsListEl.innerHTML = "";
+        submitBtn.disabled = true;
+        nextBtn.disabled = true;
+        finishBtn.disabled = true;
+        return;
+      }
+
+      const q = questions[currentIndex];
+      hasAnswered = false;
+      feedbackEl.textContent = "";
+      feedbackEl.className = "feedback";
+      finalScoreEl.style.display = "none";
+
+      questionCounterEl.textContent = `Question ${currentIndex + 1} / ${questions.length}`;
+      const progressPercent = (currentIndex / questions.length) * 100;
+      progressBarFillEl.style.width = `${progressPercent}%`;
+
+      questionTextEl.textContent = q.question;
+      optionsListEl.innerHTML = "";
+
+      q.options.forEach((opt, idx) => {
+        const li = document.createElement("li");
+        li.className = "option";
+
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "option";
+        input.value = idx;
+        input.id = `opt-${idx}`;
+
+        const label = document.createElement("label");
+        label.setAttribute("for", `opt-${idx}`);
+        label.textContent = opt;
+
+        li.appendChild(input);
+        li.appendChild(label);
+        optionsListEl.appendChild(li);
+
+        li.addEventListener("click", () => {
+          const radio = li.querySelector("input");
+          if (radio) radio.checked = true;
+        });
+      });
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit";
+      nextBtn.disabled = false;
+      finishBtn.disabled = false;
+    }
+
+    function getSelectedOptionIndex() {
+      const radios = document.querySelectorAll("input[name='option']");
+      for (let r of radios) {
+        if (r.checked) return parseInt(r.value, 10);
+      }
+      return -1;
+    }
+
+    function lockOptions() {
+      const optionEls = document.querySelectorAll(".option");
+      optionEls.forEach(opt => {
+        opt.classList.add("disabled");
+        const input = opt.querySelector("input");
+        if (input) input.disabled = true;
+      });
+    }
+
+    function showCorrectness(selectedIndex) {
+      const q = questions[currentIndex];
+      const optionEls = document.querySelectorAll(".option");
+      optionEls.forEach((optEl, idx) => {
+        optEl.classList.remove("correct", "incorrect");
+        if (idx === q.correctIndex) optEl.classList.add("correct");
+        if (idx === selectedIndex && selectedIndex !== q.correctIndex) {
+          optEl.classList.add("incorrect");
+        }
+      });
+    }
+
+    function showFinalResult() {
+      questionTextEl.textContent = "Quiz Finished!";
+      optionsListEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      submitBtn.style.display = "none";
+      nextBtn.style.display = "none";
+      finishBtn.style.display = "none";
+      finalScoreEl.style.display = "block";
+
+      if (attempted === 0) {
+        finalScoreEl.innerHTML = `
+          <strong>Result:</strong> You did not attempt any question.<br/>
+          Total questions in topic: <strong>${questions.length}</strong>.<br/><br/>
+          <button id="restart-btn">Restart Same Topic</button>
+        `;
+      } else {
+        const accuracy = Math.round((score / attempted) * 100);
+        finalScoreEl.innerHTML = `
+          <strong>Result:</strong> You scored <strong>${score}</strong> out of <strong>${attempted}</strong> attempted questions.<br/>
+          Total questions in topic: <strong>${questions.length}</strong>.<br/>
+          Accuracy: <strong>${accuracy}%</strong>.<br/><br/>
+          <button id="restart-btn">Restart Same Topic</button>
+        `;
+      }
+
+      const restartBtn = document.getElementById("restart-btn");
+      restartBtn.onclick = () => {
+        score = 0;
+        attempted = 0;
+        currentIndex = 0;
+        scoreMiniEl.textContent = "Score: 0";
+        submitBtn.style.display = "inline-block";
+        nextBtn.style.display = "inline-block";
+        finishBtn.style.display = "inline-block";
+        renderQuestion();
+      };
+    }
+
+    function goToNextQuestion() {
+      currentIndex++;
+      if (currentIndex < questions.length) {
+        renderQuestion();
+      } else {
+        progressBarFillEl.style.width = "100%";
+        showFinalResult();
+      }
+    }
+
+    // -------- Events --------
+    submitBtn.addEventListener("click", () => {
+      if (!questionsLoaded || hasAnswered) return;
+
+      const selectedIndex = getSelectedOptionIndex();
+      if (selectedIndex === -1) {
+        alert("Please select an option before submitting.");
+        return;
+      }
+
+      const q = questions[currentIndex];
+      hasAnswered = true;
+      attempted++; // count this question as attempted
+
+      if (selectedIndex === q.correctIndex) {
+        score++;
+        feedbackEl.textContent = "✅ Correct!";
+        feedbackEl.className = "feedback correct";
+      } else {
+        feedbackEl.textContent = `❌ Wrong. Correct answer: ${q.options[q.correctIndex]}`;
+        feedbackEl.className = "feedback incorrect";
+      }
+
+      scoreMiniEl.textContent = `Score: ${score}`;
+      showCorrectness(selectedIndex);
+      lockOptions();
+      submitBtn.disabled = true;
+
+      if (selectedIndex === q.correctIndex) {
+        nextBtn.disabled = true;
+        setTimeout(() => {
+          nextBtn.disabled = false;
+          goToNextQuestion();
+        }, 700);
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      goToNextQuestion();
+    });
+
+    finishBtn.addEventListener("click", () => {
+      if (!questionsLoaded) return;
+      showFinalResult();
+    });
+
+    async function loadQuestionsFromXML(topicName) {
+      const trimmed = topicName.trim();
+      if (!trimmed) {
+        alert("Please select a topic.");
+        return;
+      }
+
+      const filename = `${trimmed}.xml`;
+      topicBadgeEl.textContent = `Loading: ${filename}`;
+
+      try {
+        questionTextEl.textContent = `Loading ${filename}…`;
+        optionsListEl.innerHTML = "";
+        feedbackEl.textContent = "";
+        submitBtn.disabled = true;
+        nextBtn.disabled = true;
+        finishBtn.disabled = true;
+        finalScoreEl.style.display = "none";
+        progressBarFillEl.style.width = "0%";
+        questionCounterEl.textContent = "Loading…";
+
+        const res = await fetch(filename);
+        if (!res.ok) {
+          throw new Error(`File not found: ${filename}`);
+        }
+        const xmlText = await res.text();
+
+        const rawQuestions = parseXMLToQuestions(xmlText);
+        if (rawQuestions.length === 0) {
+          questionTextEl.textContent = "No questions parsed from XML. Check format.";
+          questionsLoaded = false;
+          topicBadgeEl.textContent = `Error in ${filename}`;
+          return;
+        }
+
+        const randomize = randomToggleEl.checked;
+        questions = prepareQuestionBank(rawQuestions, randomize);
+
+        questionsLoaded = true;
+        currentIndex = 0;
+        score = 0;
+        attempted = 0;
+        scoreMiniEl.textContent = "Score: 0";
+        submitBtn.style.display = "inline-block";
+        nextBtn.style.display = "inline-block";
+        finishBtn.style.display = "inline-block";
+
+        topicBadgeEl.textContent = `Topic: ${trimmed} (${questions.length} questions)`;
+        renderQuestion();
+      } catch (err) {
+        console.error(err);
+        questionTextEl.textContent = `Error loading ${filename}. Make sure it is in the same folder as index.html.`;
+        submitBtn.disabled = true;
+        nextBtn.disabled = true;
+        finishBtn.disabled = true;
+        topicBadgeEl.textContent = `Failed: ${filename}`;
+      }
+    }
+
+    startBtnEl.addEventListener("click", () => {
+      const dropdownVal = topicSelectEl.value;
+      loadQuestionsFromXML(dropdownVal);
+    });
+
+    // -------- Load topics.json for dropdown --------
+    async function loadTopicsList() {
+      try {
+        const res = await fetch("topics.json");
+        if (!res.ok) throw new Error("topics.json not found");
+        const topicNames = await res.json();
+        topicSelectEl.innerHTML = '<option value="">-- Select Topic --</option>';
+        topicNames.forEach(name => {
+          const opt = document.createElement("option");
+          opt.value = name;
+          opt.textContent = name;
+          topicSelectEl.appendChild(opt);
+        });
+      } catch (err) {
+        console.error(err);
+        topicSelectEl.innerHTML = '<option value="">(No topics.json found)</option>';
+      }
+    }
+
+    loadTopicsList();
+  </script>
+</body>
+</html>

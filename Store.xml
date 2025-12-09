@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question>
+    <text>Q1. In Railway terminology, "Stores" mainly refers to</text>
+    <option correct="true">All materials, components and spares held in stock</option>
+    <option correct="false">Passenger coaches only</option>
+    <option correct="false">Tickets and pass forms</option>
+    <option correct="false">Buildings and land</option>
+  </question>
+
+  <question>
+    <text>Q2. The department responsible for purchase and custody of materials is</text>
+    <option correct="false">Mechanical Department</option>
+    <option correct="false">Accounts Department</option>
+    <option correct="true">Stores Department</option>
+    <option correct="false">Operating Department</option>
+  </question>
+
+  <question>
+    <text>Q3. A sub-store or ward store in workshop is normally under the charge of</text>
+    <option correct="true">Store Keeper / In-charge</option>
+    <option correct="false">Loco Pilot</option>
+    <option correct="false">Commercial Clerk</option>
+    <option correct="false">Station Master</option>
+  </question>
+
+  <question>
+    <text>Q4. A "stock item" in store means</text>
+    <option correct="true">Item regularly used and kept in stock</option>
+    <option correct="false">Item used only once in lifetime</option>
+    <option correct="false">Item not allowed to be kept in store</option>
+    <option correct="false">Item kept at station only</option>
+  </question>
+
+  <question>
+    <text>Q5. A "non-stock item" in store is</text>
+    <option correct="false">An item never to be purchased</option>
+    <option correct="true">Item not regularly used and procured against specific demand</option>
+    <option correct="false">Item always available in store</option>
+    <option correct="false">Item without any description</option>
+  </question>
+
+  <question>
+    <text>Q6. Which of the following is most likely a stock item?</text>
+    <option correct="true">Standard size bolts and nuts</option>
+    <option correct="false">Special test rig for one project</option>
+    <option correct="false">Custom-designed jig</option>
+    <option correct="false">Unique spare for obsolete machine</option>
+  </question>
+
+  <question>
+    <text>Q7. Which of the following is most likely a non-stock item?</text>
+    <option correct="false">Common lubricating oil</option>
+    <option correct="false">Standard electrodes</option>
+    <option correct="true">Special fixture for one-time job</option>
+    <option correct="false">Cotton waste</option>
+  </question>
+
+  <question>
+    <text>Q8. A consumable item in store is one which</text>
+    <option correct="true">Is used up and cannot be reused economically</option>
+    <option correct="false">Always has infinite life</option>
+    <option correct="false">Is never issued from store</option>
+    <option correct="false">Is used only for display</option>
+  </question>
+
+  <question>
+    <text>Q9. Which of the following is a consumable item?</text>
+    <option correct="false">Hydraulic jack</option>
+    <option correct="true">Welding electrode</option>
+    <option correct="false">Measuring tape</option>
+    <option correct="false">Lathe machine</option>
+  </question>
+
+  <question>
+    <text>Q10. A non-consumable item in store is</text>
+    <option correct="false">Cotton waste</option>
+    <option correct="false">Paint</option>
+    <option correct="true">Lifting jack</option>
+    <option correct="false">Grease</option>
+  </question>
+
+  <question>
+    <text>Q11. Which of the following is a non-consumable item?</text>
+    <option correct="false">Cutting oil used during machining</option>
+    <option correct="true">Vernier caliper</option>
+    <option correct="false">Emery paper</option>
+    <option correct="false">Electrode flux</option>
+  </question>
+
+  <question>
+    <text>Q12. Custody of store items means</text>
+    <option correct="true">Responsibility for safe keeping and correct accounting</option>
+    <option correct="false">Right to use any item personally</option>
+    <option correct="false">Ownership like private property</option>
+    <option correct="false">No responsibility at all</option>
+  </question>
+
+  <question>
+    <text>Q13. Responsibility for quantity and safety of materials in a ward store lies with</text>
+    <option correct="true">Store Keeper / Ward In-charge</option>
+    <option correct="false">Any worker using the item</option>
+    <option correct="false">Passengers</option>
+    <option correct="false">Canteen contractor</option>
+  </question>
+
+  <question>
+    <text>Q14. Material in a store is normally kept in</text>
+    <option correct="true">Bins, racks and proper locations</option>
+    <option correct="false">Anywhere on the floor</option>
+    <option correct="false">At staff quarters</option>
+    <option correct="false">In control office</option>
+  </question>
+
+  <question>
+    <text>Q15. Identification of material in store is done by</text>
+    <option correct="true">Stock number, description and bin location</option>
+    <option correct="false">Colour of packing only</option>
+    <option correct="false">Name of worker</option>
+    <option correct="false">Date of joining of JE</option>
+  </question>
+
+  <question>
+    <text>Q16. A store indent or requisition is</text>
+    <option correct="true">Demand raised by user department on stores</option>
+    <option correct="false">Ticket issued to passenger</option>
+    <option correct="false">Order by passengers</option>
+    <option correct="false">Notice to contractor</option>
+  </question>
+
+  <question>
+    <text>Q17. Material receipt at stores is supported by</text>
+    <option correct="true">Supplier's challan / receipt note</option>
+    <option correct="false">Leave application</option>
+    <option correct="false">Medical certificate</option>
+    <option correct="false">Pass requisition</option>
+  </question>
+
+  <question>
+    <text>Q18. Before accepting material into stock, the store must</text>
+    <option correct="true">Check quantity, description and condition</option>
+    <option correct="false">Store directly without checking</option>
+    <option correct="false">Depend only on supplier statement</option>
+    <option correct="false">Ignore specifications</option>
+  </question>
+
+  <question>
+    <text>Q19. Material receipt inspection is done to</text>
+    <option correct="false">Delay payment to supplier</option>
+    <option correct="true">Ensure material meets required specification</option>
+    <option correct="false">Reduce stock</option>
+    <option correct="false">Increase paperwork only</option>
+  </question>
+
+  <question>
+    <text>Q20. Issue of material from store should be done only against</text>
+    <option correct="true">Proper authorised indent / issue slip</option>
+    <option correct="false">Verbal request without record</option>
+    <option correct="false">Any informal note</option>
+    <option correct="false">Personal request without authority</option>
+  </question>
+
+  <question>
+    <text>Q21. To prevent confusion and shortage, issue from store should be</text>
+    <option correct="true">Entered immediately in bin card and ledger</option>
+    <option correct="false">Recorded at year end only</option>
+    <option correct="false">Not recorded at all</option>
+    <option correct="false">Left to memory</option>
+  </question>
+
+  <question>
+    <text>Q22. A bin card is maintained</text>
+    <option correct="true">At the location of material indicating quantity in bin</option>
+    <option correct="false">At time office for attendance</option>
+    <option correct="false">At cash office</option>
+    <option correct="false">With passengers</option>
+  </question>
+
+  <question>
+    <text>Q23. Which record shows both quantity and value of store items?</text>
+    <option correct="true">Store ledger</option>
+    <option correct="false">Bin card</option>
+    <option correct="false">Muster sheet</option>
+    <option correct="false">Pay sheet</option>
+  </question>
+
+  <question>
+    <text>Q24. Bin card generally records</text>
+    <option correct="true">Receipts, issues and balance in quantity only</option>
+    <option correct="false">Only money value</option>
+    <option correct="false">Attendance of staff</option>
+    <option correct="false">Train timings</option>
+  </question>
+
+  <question>
+    <text>Q25. Store ledger is usually maintained in</text>
+    <option correct="false">Loco shed only</option>
+    <option correct="true">Stores / Accounts section</option>
+    <option correct="false">Canteen</option>
+    <option correct="false">Station master's office</option>
+  </question>
+
+  <question>
+    <text>Q26. A "return note" is used when</text>
+    <option correct="true">Surplus or unused material is returned to store</option>
+    <option correct="false">Material is first issued</option>
+    <option correct="false">Leave is sanctioned</option>
+    <option correct="false">Pay is drawn</option>
+  </question>
+
+  <question>
+    <text>Q27. Scrap material from shop is normally sent to</text>
+    <option correct="false">Passengers</option>
+    <option correct="true">Scrap yard / scrap store</option>
+    <option correct="false">Canteen</option>
+    <option correct="false">Time office</option>
+  </question>
+
+  <question>
+    <text>Q28. Surplus store item means</text>
+    <option correct="true">Item in excess of estimated requirement</option>
+    <option correct="false">Item never required</option>
+    <option correct="false">Item always short</option>
+    <option correct="false">Personal item of staff</option>
+  </question>
+
+  <question>
+    <text>Q29. Obsolete store item means</text>
+    <option correct="true">Item which is no longer required due to design change</option>
+    <option correct="false">Item frequently required</option>
+    <option correct="false">Item of good quality</option>
+    <option correct="false">Item under inspection</option>
+  </question>
+
+  <question>
+    <text>Q30. Condemnation of non-serviceable items is done by</text>
+    <option correct="true">Competent authority / condemnation board</option>
+    <option correct="false">Any worker</option>
+    <option correct="false">Passengers</option>
+    <option correct="false">Canteen staff</option>
+  </question>
+
+  <question>
+    <text>Q31. Scrap after condemnation is normally disposed by</text>
+    <option correct="true">Sale through auction / approved procedure</option>
+    <option correct="false">Free distribution to staff</option>
+    <option correct="false">Throwing in open ground</option>
+    <option correct="false">Dumping on track</option>
+  </question>
+
+  <question>
+    <text>Q32. Minimum level of stock is</text>
+    <option correct="true">Level below which stock should not fall</option>
+    <option correct="false">Highest quantity allowed</option>
+    <option correct="false">Zero stock level</option>
+    <option correct="false">Level of scrap</option>
+  </question>
+
+  <question>
+    <text>Q33. Maximum level of stock is</text>
+    <option correct="true">Highest quantity of stock allowed to avoid overstocking</option>
+    <option correct="false">Always equal to zero</option>
+    <option correct="false">Same as minimum level</option>
+    <option correct="false">Level at which purchase is started</option>
+  </question>
+
+  <question>
+    <text>Q34. Re-order level is</text>
+    <option correct="true">Stock level at which fresh purchase action is initiated</option>
+    <option correct="false">Point of zero stock</option>
+    <option correct="false">Maximum stock level</option>
+    <option correct="false">Minimum stock level</option>
+  </question>
+
+  <question>
+    <text>Q35. Safety stock means</text>
+    <option correct="true">Extra quantity kept to meet unforeseen demand or delay</option>
+    <option correct="false">Dangerous items in store</option>
+    <option correct="false">Stock under lock only</option>
+    <option correct="false">Zero stock situation</option>
+  </question>
+
+  <question>
+    <text>Q36. Overstocking of materials leads to</text>
+    <option correct="false">Saving on carrying cost</option>
+    <option correct="true">Blocking of capital and possible deterioration</option>
+    <option correct="false">Higher machine efficiency</option>
+    <option correct="false">Fewer stock records</option>
+  </question>
+
+  <question>
+    <text>Q37. Understocking of essential items can cause</text>
+    <option correct="true">Delay in repairs and loss of production</option>
+    <option correct="false">Better utilisation of machines</option>
+    <option correct="false">Improved safety</option>
+    <option correct="false">Higher scrap value</option>
+  </question>
+
+  <question>
+    <text>Q38. ABC analysis of inventory is used for</text>
+    <option correct="true">Classifying items based on value and usage</option>
+    <option correct="false">Arranging stores alphabetically only</option>
+    <option correct="false">Checking staff attendance</option>
+    <option correct="false">Planning train routes</option>
+  </question>
+
+  <question>
+    <text>Q39. In ABC analysis, "A" category items are generally</text>
+    <option correct="true">Few items with high annual consumption value</option>
+    <option correct="false">Many items with very low value</option>
+    <option correct="false">Scrap items only</option>
+    <option correct="false">Only consumable items</option>
+  </question>
+
+  <question>
+    <text>Q40. FIFO in stores stands for</text>
+    <option correct="true">First In First Out</option>
+    <option correct="false">Fast Issue Fast Out</option>
+    <option correct="false">Few In Few Out</option>
+    <option correct="false">Fixed In Fixed Out</option>
+  </question>
+
+  <question>
+    <text>Q41. FIFO principle is mainly adopted to</text>
+    <option correct="true">Issue oldest stock first to avoid deterioration</option>
+    <option correct="false">Always issue newest stock</option>
+    <option correct="false">Increase obsolescence</option>
+    <option correct="false">Ignore batch numbers</option>
+  </question>
+
+  <question>
+    <text>Q42. Physical stock verification means</text>
+    <option correct="true">Counting actual quantity and comparing with records</option>
+    <option correct="false">Checking records only</option>
+    <option correct="false">Checking staff duty roster</option>
+    <option correct="false">Reading manuals</option>
+  </question>
+
+  <question>
+    <text>Q43. Discrepancy between physical stock and book stock should be</text>
+    <option correct="true">Investigated and adjusted as per rules</option>
+    <option correct="false">Ignored always</option>
+    <option correct="false">Hidden from authorities</option>
+    <option correct="false">Used for personal gain</option>
+  </question>
+
+  <question>
+    <text>Q44. Shortage in stock found during verification may be due to</text>
+    <option correct="true">Issue without entry or pilferage</option>
+    <option correct="false">Better record keeping</option>
+    <option correct="false">Over-issue of salary</option>
+    <option correct="false">Extra painting</option>
+  </question>
+
+  <question>
+    <text>Q45. Excess stock found physically over book balance may be due to</text>
+    <option correct="true">Receipt not posted or wrong issue entry</option>
+    <option correct="false">Physical loss</option>
+    <option correct="false">Theft</option>
+    <option correct="false">Fire</option>
+  </question>
+
+  <question>
+    <text>Q46. Responsibility for safe storage of inflammable liquids like paint and thinner is of</text>
+    <option correct="true">Store in-charge and user supervisor</option>
+    <option correct="false">Passengers</option>
+    <option correct="false">Canteen contractor</option>
+    <option correct="false">No one</option>
+  </question>
+
+  <question>
+    <text>Q47. For lubricating oil drums, the best storage practice is</text>
+    <option correct="true">Store in covered, ventilated area with proper supports</option>
+    <option correct="false">Open sun with no support</option>
+    <option correct="false">On sloping floor without chocks</option>
+    <option correct="false">Inside boiler furnace</option>
+  </question>
+
+  <question>
+    <text>Q48. Corrosion of stored metallic items can be reduced by</text>
+    <option correct="true">Applying protective coating and keeping dry</option>
+    <option correct="false">Storing in water tanks</option>
+    <option correct="false">Leaving them in open rain</option>
+    <option correct="false">Keeping near chemical drain</option>
+  </question>
+
+  <question>
+    <text>Q49. Material safety data sheets (MSDS) are useful for</text>
+    <option correct="true">Knowing hazards and safe handling of chemicals</option>
+    <option correct="false">Calculating wages</option>
+    <option correct="false">Planning train routes</option>
+    <option correct="false">Preparing menus</option>
+  </question>
+
+  <question>
+    <text>Q50. For fast-moving items, stores should</text>
+    <option correct="true">Fix proper minimum and reorder levels</option>
+    <option correct="false">Keep no stock at all</option>
+    <option correct="false">Keep only one piece</option>
+    <option correct="false">Ignore consumption pattern</option>
+  </question>
+
+  <question>
+    <text>Q51. Obsolescence of store items can be reduced by</text>
+    <option correct="true">Better planning and timely review of stock</option>
+    <option correct="false">Purchasing large quantities without study</option>
+    <option correct="false">Not monitoring usage</option>
+    <option correct="false">Ignoring design changes</option>
+  </question>
+
+  <question>
+    <text>Q52. Issue of wrong item from store can be prevented by</text>
+    <option correct="true">Proper identification and cross-checking with indent</option>
+    <option correct="false">Issuing in hurry</option>
+    <option correct="false">Allowing anyone to issue</option>
+    <option correct="false">No labels on bins</option>
+  </question>
+
+  <question>
+    <text>Q53. In a ward store, tools issued to individual staff are normally recorded in</text>
+    <option correct="true">Tool issue register / card</option>
+    <option correct="false">Muster roll</option>
+    <option correct="false">Pass register</option>
+    <option correct="false">Train register</option>
+  </question>
+
+  <question>
+    <text>Q54. Periodic return of tools for inspection helps to</text>
+    <option correct="true">Ensure tools are in good condition and available</option>
+    <option correct="false">Increase loss of tools</option>
+    <option correct="false">Reduce tool life</option>
+    <option correct="false">Increase accidents</option>
+  </question>
+
+  <question>
+    <text>Q55. Perishable materials with expiry date, like some chemicals, should be</text>
+    <option correct="true">Issued and used before expiry date</option>
+    <option correct="false">Stored indefinitely</option>
+    <option correct="false">Used after expiry without care</option>
+    <option correct="false">Thrown without record</option>
+  </question>
+
+  <question>
+    <text>Q56. In case expired material is found in store</text>
+    <option correct="true">It should be segregated and processed for disposal</option>
+    <option correct="false">Issued as fresh material</option>
+    <option correct="false">Mixed with new material</option>
+    <option correct="false">Left as it is</option>
+  </question>
+
+  <question>
+    <text>Q57. A JE in workshop should ensure that issue of store items</text>
+    <option correct="true">Matches with job requirement and is not excessive</option>
+    <option correct="false">Is always maximum possible</option>
+    <option correct="false">Is not linked with job</option>
+    <option correct="false">Is done without records</option>
+  </question>
+
+  <question>
+    <text>Q58. Material reconciliation at end of job means</text>
+    <option correct="true">Comparing total issue with theoretical requirement</option>
+    <option correct="false">Checking only attendance</option>
+    <option correct="false">Checking train timings</option>
+    <option correct="false">Checking staff quarters</option>
+  </question>
+
+  <question>
+    <text>Q59. Excess consumption of material revealed by reconciliation indicates</text>
+    <option correct="true">Possible wastage, loss or wrong usage</option>
+    <option correct="false">Better efficiency</option>
+    <option correct="false">No issue</option>
+    <option correct="false">Less scrap</option>
+  </question>
+
+  <question>
+    <text>Q60. Proper store accounting helps mainly in</text>
+    <option correct="true">Control of cost and prevention of losses</option>
+    <option correct="false">Increasing pilferage</option>
+    <option correct="false">Hiding stock position</option>
+    <option correct="false">Ignoring consumption</option>
+  </question>
+
+  <question>
+    <text>Q61. In an emergency breakdown, issue of material can be allowed</text>
+    <option correct="true">With proper authorisation and subsequent regularisation</option>
+    <option correct="false">Without any record</option>
+    <option correct="false">To anyone demanding</option>
+    <option correct="false">Only after breakdown is over</option>
+  </question>
+
+  <question>
+    <text>Q62. Responsibility for safe custody of portable measuring instruments in a section is of</text>
+    <option correct="true">Section supervisor / JE</option>
+    <option correct="false">Passengers</option>
+    <option correct="false">Gatekeeper</option>
+    <option correct="false">Canteen worker</option>
+  </question>
+
+  <question>
+    <text>Q63. Stock verification is usually carried out</text>
+    <option correct="true">Periodically as per schedule and surprise checks</option>
+    <option correct="false">Never</option>
+    <option correct="false">Once in lifetime of store</option>
+    <option correct="false">Only when JE retires</option>
+  </question>
+
+  <question>
+    <text>Q64. Unauthorised removal of store items is termed as</text>
+    <option correct="true">Pilferage / theft</option>
+    <option correct="false">Normal issue</option>
+    <option correct="false">Reconciliation</option>
+    <option correct="false">Condemnation</option>
+  </question>
+
+  <question>
+    <text>Q65. To reduce pilferage, stores should have</text>
+    <option correct="true">Proper locking, control and issue procedures</option>
+    <option correct="false">Always open doors</option>
+    <option correct="false">No records</option>
+    <option correct="false">Free access to all</option>
+  </question>
+
+  <question>
+    <text>Q66. A tool which is beyond repair and not economical to retain should be</text>
+    <option correct="true">Proposed for condemnation and replacement</option>
+    <option correct="false">Used further without repair</option>
+    <option correct="false">Thrown away without record</option>
+    <option correct="false">Kept as decorative item</option>
+  </question>
+
+  <question>
+    <text>Q67. For heavy and costly items, issue from stores is generally</text>
+    <option correct="true">On written authority of competent officer</option>
+    <option correct="false">On oral request by anyone</option>
+    <option correct="false">Without identification</option>
+    <option correct="false">Without record</option>
+  </question>
+
+  <question>
+    <text>Q68. Insurance of certain high value items during transport helps to</text>
+    <option correct="true">Protect against financial loss due to damage/loss</option>
+    <option correct="false">Increase damage</option>
+    <option correct="false">Reduce their importance</option>
+    <option correct="false">Avoid packing</option>
+  </question>
+
+  <question>
+    <text>Q69. When a component is returned as scrap, it should be</text>
+    <option correct="true">Clearly identified and segregated from serviceable items</option>
+    <option correct="false">Mixed with good items</option>
+    <option correct="false">Used again without check</option>
+    <option correct="false">Not recorded</option>
+  </question>
+
+  <question>
+    <text>Q70. JE should ensure that lifting tackles (slings, chains) in stores are issued only</text>
+    <option correct="true">If tested and certified for safe working load</option>
+    <option correct="false">Even if condition is doubtful</option>
+    <option correct="false">Without any test</option>
+    <option correct="false">If broken</option>
+  </question>
+
+  <question>
+    <text>Q71. Proper labelling of bins in store helps in</text>
+    <option correct="true">Quick and correct identification of materials</option>
+    <option correct="false">Increasing confusion</option>
+    <option correct="false">Hiding items</option>
+    <option correct="false">Increasing pilferage</option>
+  </question>
+
+  <question>
+    <text>Q72. In case of flammable liquid store, smoking</text>
+    <option correct="true">Must be strictly prohibited</option>
+    <option correct="false">Is allowed freely</option>
+    <option correct="false">Allowed during night only</option>
+    <option correct="false">Allowed near drums</option>
+  </question>
+
+  <question>
+    <text>Q73. Annual stock-taking is mainly done to</text>
+    <option correct="true">Reconcile physical stock with book balance</option>
+    <option correct="false">Check only staff attendance</option>
+    <option correct="false">Stop all issues permanently</option>
+    <option correct="false">Increase scrap only</option>
+  </question>
+
+  <question>
+    <text>Q74. Stores handling equipment like forklifts and pallets are used to</text>
+    <option correct="true">Handle materials safely and efficiently</option>
+    <option correct="false">Increase manual strain</option>
+    <option correct="false">Create obstruction</option>
+    <option correct="false">Damage materials</option>
+  </question>
+
+  <question>
+    <text>Q75. For identification of high-value items, stores may use</text>
+    <option correct="true">Separate secure area or cage</option>
+    <option correct="false">Open roadside stock</option>
+    <option correct="false">No distinction</option>
+    <option correct="false">Mixing with scrap</option>
+  </question>
+
+  <question>
+    <text>Q76. Non-moving items in store for long period should be</text>
+    <option correct="true">Reviewed for future requirement and possible disposal</option>
+    <option correct="false">Ignored always</option>
+    <option correct="false">Purchased more</option>
+    <option correct="false">Never reported</option>
+  </question>
+
+  <question>
+    <text>Q77. A stock-out situation for critical item can be avoided by</text>
+    <option correct="true">Proper forecasting and timely procurement</option>
+    <option correct="false">No planning</option>
+    <option correct="false">Ignoring usage data</option>
+    <option correct="false">Reducing records</option>
+  </question>
+
+  <question>
+    <text>Q78. JE should coordinate with stores mainly to</text>
+    <option correct="true">Ensure availability of right material at right time</option>
+    <option correct="false">Delay repairs</option>
+    <option correct="false">Increase paper work only</option>
+    <option correct="false">Refuse all issues</option>
+  </question>
+
+  <question>
+    <text>Q79. For warranty items, store records are important to know</text>
+    <option correct="true">Date of receipt and usage for claiming warranty</option>
+    <option correct="false">Only scrap value</option>
+    <option correct="false">Only colour of item</option>
+    <option correct="false">Only supplier address</option>
+  </question>
+
+  <question>
+    <text>Q80. Label "Quarantined" on material generally means</text>
+    <option correct="true">Material kept aside pending inspection/decision</option>
+    <option correct="false">Free for use</option>
+    <option correct="false">Scrap only</option>
+    <option correct="false">Personal item</option>
+  </question>
+
+  <question>
+    <text>Q81. Proper ventilation in store is necessary to</text>
+    <option correct="true">Prevent deterioration of materials and improve safety</option>
+    <option correct="false">Increase humidity unnecessarily</option>
+    <option correct="false">Store fumes inside</option>
+    <option correct="false">Encourage rust</option>
+  </question>
+
+  <question>
+    <text>Q82. JE should discourage hoarding of material at shop level because</text>
+    <option correct="true">It hides actual requirement and complicates control</option>
+    <option correct="false">It improves records</option>
+    <option correct="false">It always reduces wastage</option>
+    <option correct="false">It has no effect</option>
+  </question>
+
+  <question>
+    <text>Q83. Issue of tools against tool card ensures</text>
+    <option correct="true">Traceability and accountability of tools</option>
+    <option correct="false">Tools cannot be traced</option>
+    <option correct="false">More losses</option>
+    <option correct="false">No control</option>
+  </question>
+
+  <question>
+    <text>Q84. When new drawing introduces different material, old material in store should be</text>
+    <option correct="true">Reviewed for alternative use or disposal</option>
+    <option correct="false">Ignored completely</option>
+    <option correct="false">Used blindly</option>
+    <option correct="false">Hidden</option>
+  </question>
+
+  <question>
+    <text>Q85. JE's role in condemnation process is mainly to</text>
+    <option correct="true">Initiate proposals with technical justification</option>
+    <option correct="false">Decide sale price</option>
+    <option correct="false">Conduct auction</option>
+    <option correct="false">Change purchase rules</option>
+  </question>
+
+  <question>
+    <text>Q86. Proper stacking of materials in stores avoids</text>
+    <option correct="true">Toppling, damage and obstruction of passages</option>
+    <option correct="false">Safety</option>
+    <option correct="false">Cleanliness</option>
+    <option correct="false">Orderliness</option>
+  </question>
+
+  <question>
+    <text>Q87. Hazardous materials in stores should be identified by</text>
+    <option correct="true">Warning labels and colour codes as per rules</option>
+    <option correct="false">No identification</option>
+    <option correct="false">Secret marks only</option>
+    <option correct="false">Keeping them unlabelled</option>
+  </question>
+
+  <question>
+    <text>Q88. Store accounting helps Accounts department to</text>
+    <option correct="true">Know value of inventory and control expenditure</option>
+    <option correct="false">Decide staff leave</option>
+    <option correct="false">Plan train timetable</option>
+    <option correct="false">Prepare catering menu</option>
+  </question>
+
+  <question>
+    <text>Q89. "Lead time" in stores terminology is</text>
+    <option correct="true">Time between placing order and receiving material</option>
+    <option correct="false">Time taken to use material</option>
+    <option correct="false">Time of staff shift</option>
+    <option correct="false">Time to prepare pay bill</option>
+  </question>
+
+  <question>
+    <text>Q90. Reorder level is decided based on</text>
+    <option correct="true">Consumption, lead time and safety stock</option>
+    <option correct="false">Staff strength only</option>
+    <option correct="false">Random guess</option>
+    <option correct="false">Train speed</option>
+  </question>
+
+  <question>
+    <text>Q91. An item used once in many years, but essential for safety, should be</text>
+    <option correct="true">Kept with special control as critical item</option>
+    <option correct="false">Not kept at all</option>
+    <option correct="false">Treated as scrap</option>
+    <option correct="false">Issued freely without record</option>
+  </question>
+
+  <question>
+    <text>Q92. Periodic review of stock levels helps to</text>
+    <option correct="true">Adjust stock to changing demand</option>
+    <option correct="false">Increase obsolete stock</option>
+    <option correct="false">Hide shortage</option>
+    <option correct="false">Avoid planning</option>
+  </question>
+
+  <question>
+    <text>Q93. Disposing scrap promptly is important because</text>
+    <option correct="true">It frees space and realises value</option>
+    <option correct="false">It blocks space</option>
+    <option correct="false">It increases clutter</option>
+    <option correct="false">It reduces revenue</option>
+  </question>
+
+  <question>
+    <text>Q94. JE must ensure that high-value spare like bearings are stored</text>
+    <option correct="true">In clean, dry place with proper packing</option>
+    <option correct="false">In open rain</option>
+    <option correct="false">Near chemical waste</option>
+    <option correct="false">On oily floor without packing</option>
+  </question>
+
+  <question>
+    <text>Q95. Issue of wrong grade of fastener in critical location may</text>
+    <option correct="true">Lead to failure and affect safety</option>
+    <option correct="false">Have no effect</option>
+    <option correct="false">Always improve strength</option>
+    <option correct="false">Reduce cost only</option>
+  </question>
+
+  <question>
+    <text>Q96. In Railway workshops, stores management directly supports</text>
+    <option correct="true">Continuous and safe maintenance of rolling stock</option>
+    <option correct="false">Only catering services</option>
+    <option correct="false">Only ticket printing</option>
+    <option correct="false">Only passenger announcements</option>
+  </question>
+
+  <question>
+    <text>Q97. Proper documentation for condemned items is required to</text>
+    <option correct="true">Fix responsibility and maintain transparency</option>
+    <option correct="false">Hide losses</option>
+    <option correct="false">Avoid audit</option>
+    <option correct="false">Increase confusion</option>
+  </question>
+
+  <question>
+    <text>Q98. Safety in stores is important mainly because</text>
+    <option correct="true">Many items are heavy, hazardous or flammable</option>
+    <option correct="false">Stores is a public place</option>
+    <option correct="false">No risk exists</option>
+    <option correct="false">Only papers are kept</option>
+  </question>
+
+  <question>
+    <text>Q99. JE should treat store items as</text>
+    <option correct="true">Government property to be used only for official purpose</option>
+    <option correct="false">Personal property</option>
+    <option correct="false">Free gift</option>
+    <option correct="false">Scrap always</option>
+  </question>
+
+  <question>
+    <text>Q100. Effective store control finally results in</text>
+    <option correct="true">Reduced cost, less wastage and better availability of materials</option>
+    <option correct="false">Higher cost and more wastage</option>
+    <option correct="false">Frequent stock-outs</option>
+    <option correct="false">Poor maintenance</option>
+  </question>
+
+</quiz>
