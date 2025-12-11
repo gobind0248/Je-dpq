@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <username>admin</username>
+    <password>admin123</password>
+    <name>Administrator</name>
+  </user>
+  <user>
+    <username>teacher1</username>
+    <password>teacherpass</password>
+    <name>Teacher One</name>
+  </user>
+  <user>
+    <username>student1</username>
+    <password>student123</password>
+    <name>Student One</name>
+  </user>
+  <!-- Add as many users as you want -->
+  <user>
+    <username>newuser</username>
+    <password>newpassword</password>
+    <name>New User</name>
+  </user>
+</users>
