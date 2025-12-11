@@ -21,6 +21,110 @@
       min-height: 100vh;
     }
 
+    /* Login Screen Styles */
+    .login-container {
+      background: #020617;
+      border-radius: 18px;
+      padding: 30px;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .login-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .login-subtitle {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .login-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      font-weight: 500;
+    }
+
+    .form-input {
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: 10px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      width: 100%;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .login-btn {
+      border-radius: 999px;
+      border: none;
+      padding: 14px 20px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.5);
+    }
+
+    .login-error {
+      color: #fb7185;
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 8px;
+      min-height: 20px;
+    }
+
+    .user-info {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .user-info strong {
+      color: #93c5fd;
+    }
+
+    /* Quiz Container Styles */
     .quiz-container {
       background: #020617;
       border-radius: 18px;
@@ -29,6 +133,7 @@
       width: 100%;
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(148, 163, 184, 0.3);
+      display: none;
     }
 
     .quiz-header {
@@ -61,6 +166,24 @@
       border: 1px solid rgba(37, 99, 235, 0.5);
       white-space: nowrap;
       text-align: center;
+    }
+
+    .timer-badge {
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(239, 68, 68, 0.1);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      white-space: nowrap;
+      text-align: center;
+      font-weight: 600;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
 
     .topic-row {
@@ -116,6 +239,45 @@
     .toggle-row input {
       transform: scale(1.1);
       cursor: pointer;
+    }
+
+    .timer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      background: rgba(59, 130, 246, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .timer-label {
+      font-size: 0.85rem;
+      color: #93c5fd;
+    }
+
+    .timer-display {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #60a5fa;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 1px;
+    }
+
+    .timer-warning {
+      color: #fbbf24;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .timer-critical {
+      color: #ef4444;
+      animation: pulse 0.5s infinite;
     }
 
     .progress {
@@ -220,44 +382,84 @@
       color: #fb7185;
     }
 
-    /* MODIFIED CONTROLS SECTION */
+    /* Modified Button Layout */
     .controls {
       margin-top: 12px;
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .top-controls {
-      display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
       gap: 10px;
     }
 
-    .finish-controls {
+    .left-controls {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+      gap: 10px;
+    }
+
+    .right-controls {
+      display: flex;
+      gap: 10px;
     }
 
     button {
       transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.1s ease;
-      min-width: 140px; /* Ensures all buttons have similar width */
-      padding: 10px 20px;
+    }
+
+    #previous-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
       font-size: 0.9rem;
       font-weight: 500;
-      border-radius: 999px;
-      border: none;
       cursor: pointer;
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      min-width: 120px;
+    }
+
+    #previous-btn:hover:enabled {
+      background: #111827;
+    }
+
+    #previous-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #next-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: #1f2937;
+      color: #e5e7eb;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      min-width: 120px;
+    }
+
+    #next-btn:hover:enabled {
+      background: #111827;
+    }
+
+    #next-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     #submit-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
       background: linear-gradient(to right, #22c55e, #16a34a);
       color: white;
       box-shadow: 0 8px 18px rgba(34, 197, 94, 0.4);
+      min-width: 120px;
     }
 
     #submit-btn:hover:enabled {
@@ -270,30 +472,22 @@
       cursor: not-allowed;
     }
 
-    #next-btn {
-      background: #1f2937;
-      color: #e5e7eb;
-      border: 1px solid rgba(75, 85, 99, 0.8);
-    }
-
-    #next-btn:hover:enabled {
-      background: #111827;
-    }
-
-    #next-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
     #finish-btn {
-      background: #4b5563;
-      color: #e5e7eb;
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      min-width: 180px; /* Slightly wider for better visual balance */
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: linear-gradient(to right, #f59e0b, #d97706);
+      color: white;
+      box-shadow: 0 8px 18px rgba(245, 158, 11, 0.4);
+      min-width: 120px;
     }
 
     #finish-btn:hover:enabled {
-      background: #374151;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(245, 158, 11, 0.5);
     }
 
     #finish-btn:disabled {
@@ -320,7 +514,7 @@
       color: #22c55e;
     }
 
-    /* Restart button inside final score */
+    /* Restart and New Topic buttons */
     #restart-btn {
       background: linear-gradient(to right, #3b82f6, #2563eb);
       color: white;
@@ -330,6 +524,34 @@
       cursor: pointer;
       margin-top: 10px;
       font-size: 0.9rem;
+      margin-right: 10px;
+    }
+
+    #new-topic-btn {
+      background: #6b7280;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Logout button */
+    #logout-btn {
+      background: rgba(239, 68, 68, 0.1);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      margin-left: 10px;
+    }
+
+    #logout-btn:hover {
+      background: rgba(239, 68, 68, 0.2);
     }
 
     @media (max-width: 700px) {
@@ -337,33 +559,74 @@
         margin: 10px;
       }
       
-      .top-controls {
+      .controls {
         flex-direction: column;
         gap: 8px;
       }
       
-      button {
+      .left-controls, .right-controls {
         width: 100%;
+        justify-content: center;
       }
       
-      #submit-btn, #next-btn {
-        min-width: 100%;
+      button {
+        flex: 1;
+        min-width: 0;
       }
       
-      #finish-btn {
-        min-width: 100%;
+      .quiz-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      
+      .timer-container {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
+  <!-- Login Screen -->
+  <div class="login-container" id="login-container">
+    <div class="login-title">JE-DPQ / LDCE (MCQ Practice)</div>
+    <div class="login-subtitle">• Secure Login Required •</div>
+    
+    <form class="login-form" id="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-input" placeholder="Enter your username" required autocomplete="username">
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+      </div>
+      
+      <button type="submit" class="login-btn" id="login-btn">Login</button>
+      
+      <div class="login-error" id="login-error"></div>
+      
+      <div class="user-info">
+        Auto-logout after 15 minutes of inactivity<br>
+        Credentials loaded from users.xml
+      </div>
+    </form>
+  </div>
+
+  <!-- Quiz Container (Hidden initially) -->
+  <div class="quiz-container" id="quiz-container">
     <div class="quiz-header">
       <div>
         <div class="title">JE-DPQ / LDCE (MCQ Practice)</div>
-        <div class="subtitle"> • Created by Gobind Sharma</div>
+        <div class="subtitle"> • Created by Gobind Sharma • Logged in as: <span id="logged-in-user">Guest</span></div>
       </div>
-      <div class="badge" id="current-topic-badge">No topic loaded</div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="badge" id="current-topic-badge">No topic loaded</div>
+        <button id="logout-btn">Logout</button>
+      </div>
     </div>
 
     <div class="topic-row">
@@ -372,6 +635,11 @@
         <option value="">-- Loading topics from topics.json --</option>
       </select>
       <button class="start-btn" id="start-btn">Load Topic</button>
+    </div>
+
+    <div id="timer-container" class="timer-container" style="display: none;">
+      <div class="timer-label">⏰ Quiz Timer:</div>
+      <div id="timer-display" class="timer-display">--:--:--</div>
     </div>
 
     <div class="toggle-row">
@@ -395,14 +663,15 @@
       <div id="feedback" class="feedback"></div>
     </div>
 
-    <!-- MODIFIED CONTROLS LAYOUT -->
+    <!-- Modified Button Layout: Previous/Next on LEFT, Submit/Finish on RIGHT -->
     <div class="controls">
-      <div class="top-controls">
-        <button id="submit-btn" disabled>Submit</button>
-        <button id="next-btn" disabled>Next / Skip ➜</button>
+      <div class="left-controls">
+        <button id="previous-btn" disabled>← Previous</button>
+        <button id="next-btn" disabled>Next →</button>
       </div>
-      <div class="finish-controls">
-        <button id="finish-btn" disabled>Finish</button>
+      <div class="right-controls">
+        <button id="submit-btn" disabled>Submit</button>
+        <button id="finish-btn" disabled>Finish Quiz</button>
       </div>
     </div>
 
@@ -412,40 +681,354 @@
   </div>
 
   <script>
+    // ========== GLOBAL VARIABLES ==========
     let questions = [];
     let currentIndex = 0;
     let score = 0;
     let hasAnswered = false;
     let questionsLoaded = false;
-    let attempted = 0; // counts how many questions were actually submitted
+    let attempted = 0;
+    let userAnswers = [];
+    let timeRemaining = 0;
+    let timerInterval = null;
+    let currentTopicName = "";
+    let timerDuration = 0;
+    
+    // Login system variables
+    let currentUser = null;
+    let userList = [];
+    let inactivityTimer = null;
+    const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 minutes in milliseconds
 
-    const topicSelectEl     = document.getElementById("topic-select");
-    const startBtnEl        = document.getElementById("start-btn");
-    const randomToggleEl    = document.getElementById("random-toggle");
-    const topicBadgeEl      = document.getElementById("current-topic-badge");
+    // ========== DOM ELEMENTS ==========
+    const loginContainerEl = document.getElementById("login-container");
+    const quizContainerEl = document.getElementById("quiz-container");
+    const loginFormEl = document.getElementById("login-form");
+    const usernameEl = document.getElementById("username");
+    const passwordEl = document.getElementById("password");
+    const loginErrorEl = document.getElementById("login-error");
+    const loggedInUserEl = document.getElementById("logged-in-user");
+    const logoutBtnEl = document.getElementById("logout-btn");
 
-    const questionTextEl    = document.getElementById("question-text");
-    const optionsListEl     = document.getElementById("options-list");
-    const feedbackEl        = document.getElementById("feedback");
-    const submitBtn         = document.getElementById("submit-btn");
-    const nextBtn           = document.getElementById("next-btn");
-    const finishBtn         = document.getElementById("finish-btn");
+    const topicSelectEl = document.getElementById("topic-select");
+    const startBtnEl = document.getElementById("start-btn");
+    const randomToggleEl = document.getElementById("random-toggle");
+    const topicBadgeEl = document.getElementById("current-topic-badge");
+    const timerContainerEl = document.getElementById("timer-container");
+    const timerDisplayEl = document.getElementById("timer-display");
+
+    const questionTextEl = document.getElementById("question-text");
+    const optionsListEl = document.getElementById("options-list");
+    const feedbackEl = document.getElementById("feedback");
+    const submitBtn = document.getElementById("submit-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const previousBtn = document.getElementById("previous-btn");
+    const finishBtn = document.getElementById("finish-btn");
     const questionCounterEl = document.getElementById("question-counter");
     const progressBarFillEl = document.getElementById("progress-bar-fill");
-    const scoreMiniEl       = document.getElementById("score-mini");
-    const finalScoreEl      = document.getElementById("final-score");
+    const scoreMiniEl = document.getElementById("score-mini");
+    const finalScoreEl = document.getElementById("final-score");
 
-    // -------- Helpers --------
-    function shuffleArray(arr) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+    // ========== USER MANAGEMENT FUNCTIONS ==========
+    async function loadUsersFromXML() {
+      try {
+        const response = await fetch("users.xml");
+        if (!response.ok) {
+          throw new Error("users.xml file not found");
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+        
+        // Check for XML parsing errors
+        const parserError = xmlDoc.getElementsByTagName("parsererror");
+        if (parserError.length > 0) {
+          throw new Error("Invalid XML format in users.xml");
+        }
+        
+        const userNodes = xmlDoc.getElementsByTagName("user");
+        userList = [];
+        
+        for (let i = 0; i < userNodes.length; i++) {
+          const userNode = userNodes[i];
+          const usernameNode = userNode.getElementsByTagName("username")[0];
+          const passwordNode = userNode.getElementsByTagName("password")[0];
+          const nameNode = userNode.getElementsByTagName("name")[0];
+          
+          if (usernameNode && passwordNode) {
+            userList.push({
+              username: usernameNode.textContent.trim(),
+              password: passwordNode.textContent.trim(),
+              name: nameNode ? nameNode.textContent.trim() : usernameNode.textContent.trim()
+            });
+          }
+        }
+        
+        if (userList.length === 0) {
+          throw new Error("No valid users found in users.xml");
+        }
+        
+        console.log(`Loaded ${userList.length} users from users.xml`);
+        return true;
+      } catch (error) {
+        console.error("Error loading users:", error);
+        
+        // Create default users if file doesn't exist
+        userList = [
+          { username: "admin", password: "admin123", name: "Administrator" },
+          { username: "user1", password: "password1", name: "User One" },
+          { username: "user2", password: "password2", name: "User Two" }
+        ];
+        
+        loginErrorEl.textContent = "Using default users. Create users.xml for custom users.";
+        loginErrorEl.style.color = "#fbbf24";
+        
+        return true;
       }
     }
 
+    function authenticateUser(username, password) {
+      const user = userList.find(u => 
+        u.username.toLowerCase() === username.toLowerCase() && 
+        u.password === password
+      );
+      
+      return user;
+    }
+
+    function login(user) {
+      currentUser = user;
+      loggedInUserEl.textContent = user.name;
+      
+      // Show quiz container, hide login
+      loginContainerEl.style.display = "none";
+      quizContainerEl.style.display = "block";
+      
+      // Reset inactivity timer
+      resetInactivityTimer();
+      
+      // Load topics after successful login
+      loadTopicsList();
+      
+      console.log(`User ${user.name} logged in successfully`);
+    }
+
+    function logout() {
+      if (confirm("Are you sure you want to logout?")) {
+        // Clear all timers
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        
+        if (inactivityTimer) {
+          clearTimeout(inactivityTimer);
+          inactivityTimer = null;
+        }
+        
+        // Reset quiz state
+        resetQuizState();
+        
+        // Clear current user
+        currentUser = null;
+        
+        // Show login, hide quiz
+        quizContainerEl.style.display = "none";
+        loginContainerEl.style.display = "flex";
+        
+        // Clear login form
+        loginFormEl.reset();
+        loginErrorEl.textContent = "";
+        
+        console.log("User logged out");
+      }
+    }
+
+    function autoLogout() {
+      if (currentUser) {
+        alert("You have been automatically logged out due to inactivity (15 minutes).");
+        logout();
+      }
+    }
+
+    function resetInactivityTimer() {
+      // Clear existing timer
+      if (inactivityTimer) {
+        clearTimeout(inactivityTimer);
+      }
+      
+      // Set new timer
+      inactivityTimer = setTimeout(autoLogout, INACTIVITY_TIMEOUT);
+      
+      // Add activity listeners
+      document.addEventListener('mousemove', resetInactivityTimer);
+      document.addEventListener('keypress', resetInactivityTimer);
+      document.addEventListener('click', resetInactivityTimer);
+    }
+
+    function resetQuizState() {
+      questions = [];
+      currentIndex = 0;
+      score = 0;
+      hasAnswered = false;
+      questionsLoaded = false;
+      attempted = 0;
+      userAnswers = [];
+      timeRemaining = 0;
+      timerDuration = 0;
+      currentTopicName = "";
+      
+      // Reset UI
+      questionTextEl.textContent = "Waiting for topic…";
+      optionsListEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      submitBtn.disabled = true;
+      nextBtn.disabled = true;
+      previousBtn.disabled = true;
+      finishBtn.disabled = true;
+      finalScoreEl.style.display = "none";
+      progressBarFillEl.style.width = "0%";
+      questionCounterEl.textContent = "Choose a topic and click Load Topic";
+      scoreMiniEl.textContent = "Score: 0";
+      topicBadgeEl.textContent = "No topic loaded";
+      timerContainerEl.style.display = "none";
+    }
+
+    // ========== LOGIN EVENT LISTENERS ==========
+    loginFormEl.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      
+      const username = usernameEl.value.trim();
+      const password = passwordEl.value.trim();
+      
+      if (!username || !password) {
+        loginErrorEl.textContent = "Please enter both username and password";
+        return;
+      }
+      
+      // Ensure users are loaded
+      if (userList.length === 0) {
+        await loadUsersFromXML();
+      }
+      
+      const user = authenticateUser(username, password);
+      
+      if (user) {
+        login(user);
+      } else {
+        loginErrorEl.textContent = "Invalid username or password";
+        usernameEl.focus();
+      }
+    });
+
+    logoutBtnEl.addEventListener("click", logout);
+
+    // ========== TIMER FUNCTIONS ==========
+    function startTimer() {
+      if (timerDuration <= 0) return;
+      
+      timeRemaining = timerDuration;
+      timerContainerEl.style.display = "flex";
+      
+      updateTimerDisplay();
+      
+      timerInterval = setInterval(() => {
+        timeRemaining -= 1000;
+        
+        if (timeRemaining <= 0) {
+          timeRemaining = 0;
+          clearInterval(timerInterval);
+          autoFinishQuiz();
+        }
+        
+        updateTimerDisplay();
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+      const formattedTime = 
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      timerDisplayEl.textContent = formattedTime;
+      
+      timerDisplayEl.classList.remove("timer-warning", "timer-critical");
+      
+      if (timeRemaining <= 30 * 60 * 1000) {
+        timerDisplayEl.classList.add("timer-warning");
+      }
+      
+      if (timeRemaining <= 10 * 60 * 1000) {
+        timerDisplayEl.classList.add("timer-critical");
+      }
+    }
+
+    function stopTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      timerContainerEl.style.display = "none";
+    }
+
+    function autoFinishQuiz() {
+      const timeUpMessage = document.createElement("div");
+      timeUpMessage.className = "final-score";
+      timeUpMessage.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+      timeUpMessage.style.borderColor = "rgba(239, 68, 68, 0.5)";
+      timeUpMessage.innerHTML = `
+        <strong style="color: #ef4444;">⏰ Time's Up!</strong><br/>
+        Quiz time has expired.<br/><br/>
+      `;
+      
+      finalScoreEl.parentNode.insertBefore(timeUpMessage, finalScoreEl);
+      
+      showFinalResult();
+      stopTimer();
+    }
+
+    function formatTimeTaken() {
+      if (timerDuration <= 0) return "";
+      
+      const timeTaken = timerDuration - timeRemaining;
+      const hours = Math.floor(timeTaken / (1000 * 60 * 60));
+      const minutes = Math.floor((timeTaken % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeTaken % (1000 * 60)) / 1000);
+      
+      return `${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // ========== XML PARSER ==========
     function parseXMLToQuestions(xmlText) {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+      // Reset timer duration
+      timerDuration = 0;
+
+      // Check for timer configuration in XML
+      const timerNode = xmlDoc.getElementsByTagName("timer")[0];
+      if (timerNode) {
+        const hours = parseInt(timerNode.getAttribute("hours")) || 0;
+        const minutes = parseInt(timerNode.getAttribute("minutes")) || 0;
+        
+        // Calculate total milliseconds
+        timerDuration = (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
+        
+        // Update initial display if timer is set
+        if (timerDuration > 0) {
+          const initialHours = Math.floor(timerDuration / (1000 * 60 * 60));
+          const initialMinutes = Math.floor((timerDuration % (1000 * 60 * 60)) / (1000 * 60));
+          const initialSeconds = Math.floor((timerDuration % (1000 * 60)) / 1000);
+          
+          timerDisplayEl.textContent = 
+            `${initialHours.toString().padStart(2, '0')}:${initialMinutes.toString().padStart(2, '0')}:${initialSeconds.toString().padStart(2, '0')}`;
+        }
+      }
 
       const qNodes = xmlDoc.getElementsByTagName("question");
       const out = [];
@@ -479,6 +1062,14 @@
       return out;
     }
 
+    // ========== HELPER FUNCTIONS ==========
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
     function prepareQuestionBank(rawQuestions, randomize) {
       const qs = rawQuestions.map(q => ({
         question: q.question,
@@ -501,13 +1092,14 @@
       return qs;
     }
 
-    // -------- UI --------
+    // ========== UI FUNCTIONS ==========
     function renderQuestion() {
       if (!questionsLoaded || questions.length === 0) {
         questionTextEl.textContent = "No questions available. Check your XML file.";
         optionsListEl.innerHTML = "";
         submitBtn.disabled = true;
         nextBtn.disabled = true;
+        previousBtn.disabled = true;
         finishBtn.disabled = true;
         return;
       }
@@ -535,6 +1127,10 @@
         input.value = idx;
         input.id = `opt-${idx}`;
 
+        if (userAnswers[currentIndex] !== undefined) {
+          input.checked = (userAnswers[currentIndex] === idx);
+        }
+
         const label = document.createElement("label");
         label.setAttribute("for", `opt-${idx}`);
         label.textContent = opt;
@@ -545,14 +1141,41 @@
 
         li.addEventListener("click", () => {
           const radio = li.querySelector("input");
-          if (radio) radio.checked = true;
+          if (radio) {
+            radio.checked = true;
+            userAnswers[currentIndex] = idx;
+          }
+          resetInactivityTimer(); // Reset inactivity timer on interaction
         });
       });
 
       submitBtn.disabled = false;
       submitBtn.textContent = "Submit";
+      previousBtn.disabled = (currentIndex === 0);
       nextBtn.disabled = false;
       finishBtn.disabled = false;
+      
+      if (userAnswers[currentIndex] !== undefined) {
+        const selectedIndex = userAnswers[currentIndex];
+        const isCorrect = (selectedIndex === q.correctIndex);
+        
+        showCorrectness(selectedIndex);
+        lockOptions();
+        submitBtn.disabled = true;
+        hasAnswered = true;
+        
+        if (isCorrect) {
+          feedbackEl.textContent = "✅ Correct!";
+          feedbackEl.className = "feedback correct";
+        } else {
+          feedbackEl.textContent = `❌ Wrong. Correct answer: ${q.options[q.correctIndex]}`;
+          feedbackEl.className = "feedback incorrect";
+        }
+      } else {
+        feedbackEl.textContent = "";
+      }
+      
+      resetInactivityTimer(); // Reset inactivity timer on question render
     }
 
     function getSelectedOptionIndex() {
@@ -585,41 +1208,70 @@
     }
 
     function showFinalResult() {
+      if (timerInterval) {
+        stopTimer();
+      }
+      
       questionTextEl.textContent = "Quiz Finished!";
       optionsListEl.innerHTML = "";
       feedbackEl.textContent = "";
       submitBtn.style.display = "none";
       nextBtn.style.display = "none";
+      previousBtn.style.display = "none";
       finishBtn.style.display = "none";
       finalScoreEl.style.display = "block";
+
+      let finalScore = 0;
+      for (let i = 0; i < questions.length; i++) {
+        if (userAnswers[i] !== undefined && userAnswers[i] === questions[i].correctIndex) {
+          finalScore++;
+        }
+      }
+
+      const timerInfo = timerDuration > 0 ? 
+        `<br/><small style="color: #9ca3af;">Time taken: ${formatTimeTaken()}</small>` : '';
 
       if (attempted === 0) {
         finalScoreEl.innerHTML = `
           <strong>Result:</strong> You did not attempt any question.<br/>
-          Total questions in topic: <strong>${questions.length}</strong>.<br/><br/>
+          Total questions in topic: <strong>${questions.length}</strong>.${timerInfo}<br/><br/>
           <button id="restart-btn">Restart Same Topic</button>
+          <button id="new-topic-btn">Choose New Topic</button>
         `;
       } else {
-        const accuracy = Math.round((score / attempted) * 100);
+        const accuracy = Math.round((finalScore / attempted) * 100);
         finalScoreEl.innerHTML = `
-          <strong>Result:</strong> You scored <strong>${score}</strong> out of <strong>${attempted}</strong> attempted questions.<br/>
+          <strong>Result:</strong> You scored <strong>${finalScore}</strong> out of <strong>${attempted}</strong> attempted questions.<br/>
           Total questions in topic: <strong>${questions.length}</strong>.<br/>
-          Accuracy: <strong>${accuracy}%</strong>.<br/><br/>
+          Accuracy: <strong>${accuracy}%</strong>.${timerInfo}<br/><br/>
           <button id="restart-btn">Restart Same Topic</button>
+          <button id="new-topic-btn">Choose New Topic</button>
         `;
       }
 
-      const restartBtn = document.getElementById("restart-btn");
-      restartBtn.onclick = () => {
-        score = 0;
-        attempted = 0;
-        currentIndex = 0;
-        scoreMiniEl.textContent = "Score: 0";
+      document.getElementById("restart-btn").onclick = () => {
+        restartQuiz();
+      };
+      
+      document.getElementById("new-topic-btn").onclick = () => {
+        restartQuiz();
+        topicSelectEl.value = "";
+        topicBadgeEl.textContent = "No topic loaded";
+        questionTextEl.textContent = "Waiting for topic…";
+        optionsListEl.innerHTML = "";
+        feedbackEl.textContent = "";
         submitBtn.style.display = "inline-block";
         nextBtn.style.display = "inline-block";
+        previousBtn.style.display = "inline-block";
         finishBtn.style.display = "inline-block";
-        renderQuestion();
+        finalScoreEl.style.display = "none";
+        progressBarFillEl.style.width = "0%";
+        questionCounterEl.textContent = "Choose a topic and click Load Topic";
+        scoreMiniEl.textContent = "Score: 0";
+        stopTimer();
       };
+      
+      resetInactivityTimer(); // Reset inactivity timer on quiz completion
     }
 
     function goToNextQuestion() {
@@ -630,21 +1282,52 @@
         progressBarFillEl.style.width = "100%";
         showFinalResult();
       }
+      resetInactivityTimer(); // Reset inactivity timer on navigation
     }
 
-    // -------- Events --------
+    function goToPreviousQuestion() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion();
+      }
+      resetInactivityTimer(); // Reset inactivity timer on navigation
+    }
+
+    function restartQuiz() {
+      score = 0;
+      attempted = 0;
+      currentIndex = 0;
+      userAnswers = [];
+      scoreMiniEl.textContent = "Score: 0";
+      submitBtn.style.display = "inline-block";
+      nextBtn.style.display = "inline-block";
+      previousBtn.style.display = "inline-block";
+      finishBtn.style.display = "inline-block";
+      finalScoreEl.style.display = "none";
+      
+      if (timerDuration > 0) {
+        startTimer();
+      }
+      
+      loadQuestionsFromXML(currentTopicName);
+      resetInactivityTimer(); // Reset inactivity timer on restart
+    }
+
+    // ========== QUIZ EVENT LISTENERS ==========
     submitBtn.addEventListener("click", () => {
       if (!questionsLoaded || hasAnswered) return;
 
       const selectedIndex = getSelectedOptionIndex();
       if (selectedIndex === -1) {
         alert("Please select an option before submitting.");
+        resetInactivityTimer();
         return;
       }
 
       const q = questions[currentIndex];
       hasAnswered = true;
-      attempted++; // count this question as attempted
+      attempted++;
+      userAnswers[currentIndex] = selectedIndex;
 
       if (selectedIndex === q.correctIndex) {
         score++;
@@ -667,24 +1350,36 @@
           goToNextQuestion();
         }, 700);
       }
+      
+      resetInactivityTimer(); // Reset inactivity timer on submit
     });
 
     nextBtn.addEventListener("click", () => {
       goToNextQuestion();
     });
 
-    finishBtn.addEventListener("click", () => {
-      if (!questionsLoaded) return;
-      showFinalResult();
+    previousBtn.addEventListener("click", () => {
+      goToPreviousQuestion();
     });
 
+    finishBtn.addEventListener("click", () => {
+      if (!questionsLoaded) return;
+      if (confirm("Are you sure you want to finish the quiz? Your current score will be calculated.")) {
+        showFinalResult();
+      }
+      resetInactivityTimer(); // Reset inactivity timer on finish
+    });
+
+    // ========== LOAD QUESTIONS ==========
     async function loadQuestionsFromXML(topicName) {
       const trimmed = topicName.trim();
       if (!trimmed) {
         alert("Please select a topic.");
+        resetInactivityTimer();
         return;
       }
 
+      currentTopicName = trimmed;
       const filename = `${trimmed}.xml`;
       topicBadgeEl.textContent = `Loading: ${filename}`;
 
@@ -694,10 +1389,14 @@
         feedbackEl.textContent = "";
         submitBtn.disabled = true;
         nextBtn.disabled = true;
+        previousBtn.disabled = true;
         finishBtn.disabled = true;
         finalScoreEl.style.display = "none";
         progressBarFillEl.style.width = "0%";
         questionCounterEl.textContent = "Loading…";
+
+        timerContainerEl.style.display = "none";
+        timerDuration = 0;
 
         const res = await fetch(filename);
         if (!res.ok) {
@@ -715,6 +1414,7 @@
 
         const randomize = randomToggleEl.checked;
         questions = prepareQuestionBank(rawQuestions, randomize);
+        userAnswers = new Array(questions.length);
 
         questionsLoaded = true;
         currentIndex = 0;
@@ -723,45 +1423,105 @@
         scoreMiniEl.textContent = "Score: 0";
         submitBtn.style.display = "inline-block";
         nextBtn.style.display = "inline-block";
+        previousBtn.style.display = "inline-block";
         finishBtn.style.display = "inline-block";
 
         topicBadgeEl.textContent = `Topic: ${trimmed} (${questions.length} questions)`;
+        
+        if (timerDuration > 0) {
+          startTimer();
+        }
+        
         renderQuestion();
+        resetInactivityTimer();
       } catch (err) {
         console.error(err);
         questionTextEl.textContent = `Error loading ${filename}. Make sure it is in the same folder as index.html.`;
         submitBtn.disabled = true;
         nextBtn.disabled = true;
+        previousBtn.disabled = true;
         finishBtn.disabled = true;
         topicBadgeEl.textContent = `Failed: ${filename}`;
+        resetInactivityTimer();
       }
     }
 
     startBtnEl.addEventListener("click", () => {
       const dropdownVal = topicSelectEl.value;
+      
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      
       loadQuestionsFromXML(dropdownVal);
+      resetInactivityTimer();
     });
 
-    // -------- Load topics.json for dropdown --------
+    // ========== LOAD TOPICS ==========
     async function loadTopicsList() {
       try {
         const res = await fetch("topics.json");
-        if (!res.ok) throw new Error("topics.json not found");
-        const topicNames = await res.json();
+        if (!res.ok) {
+          throw new Error("topics.json not found");
+        }
+        
+        const topics = await res.json();
+        
+        if (!Array.isArray(topics) || topics.length === 0) {
+          throw new Error("topics.json is empty or invalid");
+        }
+        
+        // Clear and populate dropdown
         topicSelectEl.innerHTML = '<option value="">-- Select Topic --</option>';
-        topicNames.forEach(name => {
-          const opt = document.createElement("option");
-          opt.value = name;
-          opt.textContent = name;
-          topicSelectEl.appendChild(opt);
+        
+        topics.forEach(topic => {
+          if (typeof topic === 'string' && topic.trim() !== '') {
+            const option = document.createElement("option");
+            option.value = topic.trim();
+            option.textContent = topic.trim();
+            topicSelectEl.appendChild(option);
+          }
         });
+        
+        console.log(`Loaded ${topics.length} topics from topics.json`);
+        
       } catch (err) {
-        console.error(err);
-        topicSelectEl.innerHTML = '<option value="">(No topics.json found)</option>';
+        console.error("Error loading topics.json:", err);
+        topicSelectEl.innerHTML = `
+          <option value="">-- Error: topics.json required --</option>
+          <option value="">Create topics.json with topic names</option>
+        `;
+        
+        topicBadgeEl.textContent = "Error: topics.json";
+        topicBadgeEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+        topicBadgeEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+        topicBadgeEl.style.color = "#fca5a5";
       }
+      resetInactivityTimer();
+    }
+    
+    // ========== INITIALIZATION ==========
+    async function initializeApp() {
+      // Load users first
+      await loadUsersFromXML();
+      
+      // Add focus to username field
+      usernameEl.focus();
+      
+      // Set up keyboard shortcuts
+      document.addEventListener('keydown', function(e) {
+        // Escape key to focus on logout when logged in
+        if (e.key === 'Escape' && currentUser) {
+          logoutBtnEl.focus();
+        }
+      });
+      
+      console.log("App initialized. Please login to continue.");
     }
 
-    loadTopicsList();
+    // Start the app when page loads
+    document.addEventListener("DOMContentLoaded", initializeApp);
   </script>
 </body>
 </html>
