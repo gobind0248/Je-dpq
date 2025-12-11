@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <!-- Timer configuration: 2 hours -->
+  <timer hours="0" minutes="90" />
+  
+  <question>
+    <text>What is the capital of India?</text>
+    <option correct="true">New Delhi</option>
+    <option>Mumbai</option>
+    <option>Kolkata</option>
+    <option>Chennai</option>
+  </question>
+  
+  <question>
+    <text>Which is the largest state in India by area?</text>
+    <option>Madhya Pradesh</option>
+    <option correct="true">Rajasthan</option>
+    <option>Maharashtra</option>
+    <option>Uttar Pradesh</option>
+  </question>
+  
+  <!-- Add more questions here -->
+</quiz>
