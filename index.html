@@ -148,7 +148,7 @@
 
     .badge {
       font-size: 0.78rem;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
       background: rgba(59, 130, 246, 0.1);
       color: #93c5fd;
@@ -191,11 +191,13 @@
     .topic-select {
       background: #020617;
       color: #e5e7eb;
-      border-radius: 999px;
+      border-radius: 8px;
       border: 1px solid rgba(75, 85, 99, 0.9);
-      padding: 6px 10px;
+      padding: 8px 12px;
       font-size: 0.9rem;
       min-width: 220px;
+      flex: 1;
+      max-width: 300px;
     }
 
     .start-btn {
@@ -208,6 +210,7 @@
       background: linear-gradient(to right, #3b82f6, #2563eb);
       color: white;
       box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+      white-space: nowrap;
     }
 
     .start-btn:hover {
@@ -267,6 +270,20 @@
     .timer-critical {
       color: #ef4444;
       animation: pulse 0.5s infinite;
+    }
+
+    /* Timer Notification - Added from Google Sheets version */
+    .timer-notification {
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 10px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 0.85rem;
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .progress {
@@ -631,6 +648,8 @@
       <label for="random-toggle">Randomize questions & options</label>
     </div>
 
+    <!-- Timer Notification will be inserted here by JavaScript -->
+
     <div class="progress">
       <div id="question-counter">Choose a topic and click Load Topic</div>
       <div class="progress-bar">
@@ -677,6 +696,9 @@
     let timerInterval = null;
     let currentTopicName = "";
     let timerDuration = 0;
+    
+    // Timer notification variable - Added from Google Sheets version
+    let timerNotification = null;
     
     // Login system variables
     let currentUser = null;
@@ -884,6 +906,9 @@
       scoreMiniEl.textContent = "Score: 0";
       topicBadgeEl.textContent = "No topic loaded";
       timerContainerEl.style.display = "none";
+      
+      // Remove timer notification
+      removeTimerNotification();
     }
 
     // ========== LOGIN EVENT LISTENERS ==========
@@ -974,6 +999,63 @@
       timerContainerEl.style.display = "none";
     }
 
+    // ========== TIMER NOTIFICATION FUNCTIONS - Added from Google Sheets version ==========
+    function showTimerNotification() {
+      removeTimerNotification();
+      
+      if (timerDuration > 0) {
+        // Calculate hours and minutes from timerDuration
+        const hours = Math.floor(timerDuration / (1000 * 60 * 60));
+        const minutes = Math.floor((timerDuration % (1000 * 60 * 60)) / (1000 * 60));
+        
+        // Create a descriptive time string
+        let timeString = "";
+        if (hours > 0 && minutes > 0) {
+          timeString = `${hours} hour${hours > 1 ? 's' : ''} ${minutes} minute${minutes > 1 ? 's' : ''}`;
+        } else if (hours > 0) {
+          timeString = `${hours} hour${hours > 1 ? 's' : ''}`;
+        } else if (minutes > 0) {
+          timeString = `${minutes} minute${minutes > 1 ? 's' : ''}`;
+        } else {
+          timeString = "less than a minute";
+        }
+        
+        timerNotification = document.createElement("div");
+        timerNotification.className = "timer-notification";
+        timerNotification.innerHTML = `
+          <span>⏰</span>
+          <span>Timer set: <strong>${timeString}</strong> for this quiz</span>
+        `;
+        
+        // Insert the notification after the toggle row
+        const toggleRow = document.querySelector(".toggle-row");
+        if (toggleRow && toggleRow.nextElementSibling) {
+          toggleRow.parentNode.insertBefore(timerNotification, toggleRow.nextElementSibling);
+        } else {
+          // Fallback: insert before progress bar
+          const progressBar = document.querySelector(".progress");
+          if (progressBar) {
+            progressBar.parentNode.insertBefore(timerNotification, progressBar);
+          }
+        }
+      }
+    }
+
+    function removeTimerNotification() {
+      if (timerNotification && timerNotification.parentNode) {
+        timerNotification.parentNode.removeChild(timerNotification);
+        timerNotification = null;
+      }
+      
+      // Also remove any other timer notifications that might exist
+      const existingNotifications = document.querySelectorAll(".timer-notification");
+      existingNotifications.forEach(notification => {
+        if (notification.parentNode) {
+          notification.parentNode.removeChild(notification);
+        }
+      });
+    }
+
     function autoFinishQuiz() {
       const timeUpMessage = document.createElement("div");
       timeUpMessage.className = "final-score";
@@ -988,6 +1070,7 @@
       
       showFinalResult();
       stopTimer();
+      removeTimerNotification();
     }
 
     function formatTimeTaken() {
@@ -998,7 +1081,13 @@
       const minutes = Math.floor((timeTaken % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeTaken % (1000 * 60)) / 1000);
       
-      return `${hours}h ${minutes}m ${seconds}s`;
+      if (hours > 0) {
+        return `${hours}h ${minutes}m ${seconds}s`;
+      } else if (minutes > 0) {
+        return `${minutes}m ${seconds}s`;
+      } else {
+        return `${seconds}s`;
+      }
     }
 
     // ========== XML PARSER ==========
@@ -1268,6 +1357,7 @@
         questionCounterEl.textContent = "Choose a topic and click Load Topic";
         scoreMiniEl.textContent = "Score: 0";
         stopTimer();
+        removeTimerNotification(); // Remove notification when choosing new topic
       };
       
       resetInactivityTimer(); // Reset inactivity timer on quiz completion
@@ -1305,6 +1395,7 @@
       finalScoreEl.style.display = "none";
       
       if (timerDuration > 0) {
+        showTimerNotification(); // Show notification again on restart
         startTimer();
       }
       
@@ -1396,6 +1487,9 @@
 
         timerContainerEl.style.display = "none";
         timerDuration = 0;
+        
+        // Remove any existing timer notification
+        removeTimerNotification();
 
         const res = await fetch(filename);
         if (!res.ok) {
@@ -1427,7 +1521,9 @@
 
         topicBadgeEl.textContent = `Topic: ${trimmed} (${questions.length} questions)`;
         
+        // Show timer notification if timer is set
         if (timerDuration > 0) {
+          showTimerNotification();
           startTimer();
         }
         
@@ -1452,6 +1548,9 @@
         clearInterval(timerInterval);
         timerInterval = null;
       }
+      
+      // Remove any existing timer notification before loading new topic
+      removeTimerNotification();
       
       loadQuestionsFromXML(dropdownVal);
       resetInactivityTimer();
