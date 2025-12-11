@@ -113,17 +113,6 @@
       min-height: 20px;
     }
 
-    .user-info {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .user-info strong {
-      color: #93c5fd;
-    }
-
     /* Quiz Container Styles */
     .quiz-container {
       background: #020617;
@@ -608,11 +597,6 @@
       <button type="submit" class="login-btn" id="login-btn">Login</button>
       
       <div class="login-error" id="login-error"></div>
-      
-      <div class="user-info">
-        Auto-logout after 15 minutes of inactivity<br>
-        Credentials loaded from users.xml
-      </div>
     </form>
   </div>
 
@@ -757,16 +741,23 @@
           const nameNode = userNode.getElementsByTagName("name")[0];
           
           if (usernameNode && passwordNode) {
-            userList.push({
-              username: usernameNode.textContent.trim(),
-              password: passwordNode.textContent.trim(),
-              name: nameNode ? nameNode.textContent.trim() : usernameNode.textContent.trim()
-            });
+            const username = usernameNode.textContent.trim();
+            const password = passwordNode.textContent.trim();
+            const name = nameNode ? nameNode.textContent.trim() : username;
+            
+            // Validate that username and password are not empty
+            if (username && password) {
+              userList.push({
+                username: username,
+                password: password,
+                name: name
+              });
+            }
           }
         }
         
         if (userList.length === 0) {
-          throw new Error("No valid users found in users.xml");
+          throw new Error("No valid users found in users.xml. Please check the file format.");
         }
         
         console.log(`Loaded ${userList.length} users from users.xml`);
@@ -774,21 +765,18 @@
       } catch (error) {
         console.error("Error loading users:", error);
         
-        // Create default users if file doesn't exist
-        userList = [
-          { username: "admin", password: "admin123", name: "Administrator" },
-          { username: "user1", password: "password1", name: "User One" },
-          { username: "user2", password: "password2", name: "User Two" }
-        ];
+        // Show error to user
+        loginErrorEl.textContent = "Error: Could not load users.xml. Please create a valid users.xml file.";
+        loginErrorEl.style.color = "#fb7185";
         
-        loginErrorEl.textContent = "Using default users. Create users.xml for custom users.";
-        loginErrorEl.style.color = "#fbbf24";
-        
-        return true;
+        // Don't create default users - force proper XML file
+        userList = [];
+        return false;
       }
     }
 
     function authenticateUser(username, password) {
+      // Case-insensitive username comparison
       const user = userList.find(u => 
         u.username.toLowerCase() === username.toLowerCase() && 
         u.password === password
@@ -840,6 +828,9 @@
         // Clear login form
         loginFormEl.reset();
         loginErrorEl.textContent = "";
+        
+        // Focus on username field
+        usernameEl.focus();
         
         console.log("User logged out");
       }
@@ -907,9 +898,16 @@
         return;
       }
       
+      // Clear previous error
+      loginErrorEl.textContent = "";
+      
       // Ensure users are loaded
       if (userList.length === 0) {
-        await loadUsersFromXML();
+        const loaded = await loadUsersFromXML();
+        if (!loaded) {
+          loginErrorEl.textContent = "Cannot load users. Please check users.xml file.";
+          return;
+        }
       }
       
       const user = authenticateUser(username, password);
@@ -919,6 +917,7 @@
       } else {
         loginErrorEl.textContent = "Invalid username or password";
         usernameEl.focus();
+        usernameEl.select();
       }
     });
 
