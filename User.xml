@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
   <user>
-    <username>gobind</username>
-    <password>1144</password>
-    <name>Administrator</name>
+    <username>gks</username>
+    <password>12</password>
+    <name>Administrator/name>
   </user>
   <user>
-    <username>user1</username>
-    <password>password1</password>
-    <name>User One</name>
+    <username>teacher1</username>
+    <password>teacherpass</password>
+    <name>Teacher One</name>
   </user>
   <user>
-    <username>user2</username>
-    <password>password2</password>
-    <name>User Two</name>
+    <username>student1</username>
+    <password>student123</password>
+    <name>Student One</name>
+  </user>
+  <!-- Add as many users as you want -->
+  <user>
+    <username>newuser</username>
+    <password>newpassword</password>
+    <name>New User</name>
   </user>
 </users>
