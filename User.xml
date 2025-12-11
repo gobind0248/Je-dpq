@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <username>gobind</username>
+    <password>1144</password>
+    <name>Administrator</name>
+  </user>
+  <user>
+    <username>user1</username>
+    <password>password1</password>
+    <name>User One</name>
+  </user>
+  <user>
+    <username>user2</username>
+    <password>password2</password>
+    <name>User Two</name>
+  </user>
+</users>
