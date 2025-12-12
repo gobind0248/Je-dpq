@@ -5,6 +5,7 @@
   <title>JE DPQ/LDCE MCQ Practice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    /* ===== BASE STYLES ===== */
     * {
       box-sizing: border-box;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -15,43 +16,178 @@
       padding: 0;
       background: #0f172a;
       color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
-    }
-
-    /* Login Screen Styles */
-    .login-container {
-      background: #020617;
-      border-radius: 18px;
-      padding: 30px;
-      max-width: 420px;
-      width: 90%;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
+    /* ===== FIXED HEADER ===== */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(2, 6, 23, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      z-index: 1000;
+      padding: 8px 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-center {
+      flex: 1;
+      text-align: center;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .header-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #3b82f6 0%, #22c55e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+      margin: 0;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .header-subtitle {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    .header-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 3px 0;
+    }
+
+    .user-info {
+      font-size: 0.85rem;
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.15);
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      white-space: nowrap;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 1;
+      min-width: 0;
+    }
+
+    .logout-btn {
+      background: rgba(239, 68, 68, 0.15);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .logout-btn:hover {
+      background: rgba(239, 68, 68, 0.25);
+      transform: translateY(-1px);
+    }
+
+    /* ===== MAIN CONTENT AREA ===== */
+    .main-content {
+      width: 100%;
+      max-width: 720px;
+      margin-top: 90px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ===== LOGIN STYLES ===== */
+    #login-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .login-box {
+      background: #020617;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
     .login-title {
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-weight: 700;
       color: #e5e7eb;
       margin-bottom: 8px;
-      text-align: center;
+      background: linear-gradient(90deg, #3b82f6 0%, #22c55e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.5px;
     }
 
     .login-subtitle {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: #9ca3af;
-      margin-bottom: 28px;
       text-align: center;
     }
 
     .login-form {
-      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -70,134 +206,130 @@
     }
 
     .form-input {
-      background: #020617;
+      background: #111827;
       color: #e5e7eb;
       border-radius: 10px;
       border: 1px solid rgba(75, 85, 99, 0.9);
       padding: 12px 16px;
       font-size: 0.95rem;
+      transition: all 0.2s ease;
       width: 100%;
-      transition: border-color 0.2s ease;
     }
 
     .form-input:focus {
       outline: none;
       border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .form-input::placeholder {
+      color: #6b7280;
     }
 
     .login-btn {
-      border-radius: 999px;
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
       border: none;
-      padding: 14px 20px;
+      border-radius: 999px;
+      padding: 14px 24px;
       font-size: 1rem;
       font-weight: 500;
       cursor: pointer;
-      background: linear-gradient(to right, #3b82f6, #2563eb);
-      color: white;
-      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+      transition: all 0.2s ease;
       margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
       width: 100%;
     }
 
-    .login-btn:hover {
-      transform: translateY(-1px);
+    .login-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
       box-shadow: 0 10px 22px rgba(37, 99, 235, 0.5);
     }
 
-    .login-error {
-      color: #fb7185;
-      font-size: 0.85rem;
-      text-align: center;
-      margin-top: 8px;
-      min-height: 20px;
+    .login-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
-    /* Quiz Container Styles */
+    .login-error {
+      background: rgba(239, 68, 68, 0.1);
+      color: #fca5a5;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      display: none;
+      text-align: center;
+    }
+
+    /* ===== QUIZ STYLES ===== */
     .quiz-container {
       background: #020617;
       border-radius: 18px;
       padding: 20px 22px;
-      max-width: 720px;
-      width: 100%;
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(148, 163, 184, 0.3);
       display: none;
+      width: 100%;
     }
 
-    .quiz-header {
+    /* TOPIC SELECTION SECTION */
+    .topic-section {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 12px;
+      border: 1px solid rgba(75, 85, 99, 0.5);
+    }
+
+    .topic-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 12px;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .title {
-      font-size: 1.15rem;
+    .topic-name {
+      font-size: 1rem;
       font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .subtitle {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 2px;
-    }
-
-    .badge {
-      font-size: 0.78rem;
+      color: #3b82f6;
+      background: rgba(59, 130, 246, 0.15);
       padding: 4px 12px;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.1);
-      color: #93c5fd;
-      border: 1px solid rgba(37, 99, 235, 0.5);
-      white-space: nowrap;
-      text-align: center;
+      border-radius: 8px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
     }
 
-    .timer-badge {
-      font-size: 0.78rem;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: rgba(239, 68, 68, 0.1);
-      color: #fca5a5;
-      border: 1px solid rgba(239, 68, 68, 0.5);
-      white-space: nowrap;
-      text-align: center;
-      font-weight: 600;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
+    .question-count {
+      font-size: 0.9rem;
+      color: #22c55e;
+      background: rgba(34, 197, 94, 0.15);
+      padding: 4px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(34, 197, 94, 0.3);
     }
 
     .topic-row {
-      margin-bottom: 14px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
     }
 
-    .topic-row label {
-      font-size: 0.9rem;
-      color: #d1d5db;
-    }
-
     .topic-select {
-      background: #020617;
+      background: rgba(15, 23, 42, 0.7);
       color: #e5e7eb;
       border-radius: 8px;
       border: 1px solid rgba(75, 85, 99, 0.9);
       padding: 8px 12px;
       font-size: 0.9rem;
-      min-width: 220px;
       flex: 1;
-      max-width: 300px;
+      min-width: 200px;
     }
 
     .start-btn {
@@ -218,6 +350,7 @@
       box-shadow: 0 10px 22px rgba(37, 99, 235, 0.5);
     }
 
+    /* RANDOMIZE TOGGLE */
     .toggle-row {
       display: flex;
       align-items: center;
@@ -231,8 +364,40 @@
     .toggle-row input {
       transform: scale(1.1);
       cursor: pointer;
+      accent-color: #3b82f6;
     }
 
+    .toggle-row label {
+      cursor: pointer;
+    }
+
+    /* QUIZ CONTENT */
+    .progress {
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(to right, #22c55e, #3b82f6);
+      transition: width 0.3s ease;
+    }
+
+    /* TIMER CONTAINER */
     .timer-container {
       display: flex;
       justify-content: space-between;
@@ -247,6 +412,8 @@
     .timer-label {
       font-size: 0.85rem;
       color: #93c5fd;
+      white-space: nowrap;
+      margin-right: 10px;
     }
 
     .timer-display {
@@ -255,6 +422,7 @@
       color: #60a5fa;
       font-family: 'Courier New', monospace;
       letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     .timer-warning {
@@ -272,7 +440,6 @@
       animation: pulse 0.5s infinite;
     }
 
-    /* Timer Notification - Added from Google Sheets version */
     .timer-notification {
       margin-bottom: 10px;
       padding: 8px 12px;
@@ -286,33 +453,9 @@
       gap: 8px;
     }
 
-    .progress {
-      margin-bottom: 16px;
-      font-size: 0.85rem;
-      color: #9ca3af;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .progress-bar {
-      flex: 1;
-      height: 6px;
-      background: #111827;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(to right, #22c55e, #3b82f6);
-      transition: width 0.3s ease;
-    }
-
+    /* QUESTION BOX */
     .question-box {
-      background: #020617;
+      background: rgba(15, 23, 42, 0.7);
       border-radius: 14px;
       padding: 14px 14px 10px;
       border: 1px solid rgba(75, 85, 99, 0.7);
@@ -321,12 +464,13 @@
     }
 
     .question-text {
-      font-size: 0.98rem;
+      font-size: 1rem;
       font-weight: 500;
       color: #f9fafb;
       line-height: 1.5;
     }
 
+    /* OPTIONS */
     .options {
       list-style: none;
       padding: 0;
@@ -337,6 +481,7 @@
     }
 
     .option {
+      background: rgba(15, 23, 42, 0.5);
       border-radius: 12px;
       border: 1px solid rgba(75, 85, 99, 0.9);
       padding: 8px 9px;
@@ -344,7 +489,7 @@
       align-items: center;
       gap: 8px;
       cursor: pointer;
-      transition: background 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+      transition: all 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
       font-size: 0.92rem;
       color: #e5e7eb;
     }
@@ -360,12 +505,12 @@
     }
 
     .option.correct {
-      background: rgba(22, 163, 74, 0.18);
+      background: rgba(22, 163, 74, 0.25);
       border-color: #22c55e;
     }
 
     .option.incorrect {
-      background: rgba(220, 38, 38, 0.12);
+      background: rgba(220, 38, 38, 0.2);
       border-color: #f97373;
     }
 
@@ -388,7 +533,7 @@
       color: #fb7185;
     }
 
-    /* Modified Button Layout */
+    /* CONTROLS LAYOUT */
     .controls {
       margin-top: 12px;
       display: flex;
@@ -400,11 +545,15 @@
     .left-controls {
       display: flex;
       gap: 10px;
+      justify-content: flex-start;
+      flex: 1;
     }
 
     .right-controls {
       display: flex;
       gap: 10px;
+      justify-content: flex-end;
+      flex: 1;
     }
 
     button {
@@ -507,62 +656,139 @@
       color: #e5e7eb;
     }
 
+    /* UPDATED FINAL SCORE STYLES */
     .final-score {
       margin-top: 10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.8);
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(75, 85, 99, 0.7);
       font-size: 0.95rem;
     }
 
-    .final-score strong {
+    .result-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-bottom: 15px;
+      text-align: center;
+      border-bottom: 1px solid rgba(75, 85, 99, 0.5);
+      padding-bottom: 10px;
+    }
+
+    .result-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .stat-item {
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(2, 6, 23, 0.5);
+      border: 1px solid rgba(75, 85, 99, 0.5);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .stat-percentage {
       color: #22c55e;
     }
 
-    /* Restart and New Topic buttons */
-    #restart-btn {
-      background: linear-gradient(to right, #3b82f6, #2563eb);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
+    .stat-time {
+      color: #f59e0b;
+    }
+
+    .result-summary {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(2, 6, 23, 0.5);
+      border: 1px solid rgba(75, 85, 99, 0.5);
+      text-align: center;
       font-size: 0.9rem;
-      margin-right: 10px;
+      color: #9ca3af;
     }
 
-    #new-topic-btn {
-      background: #6b7280;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
+    .result-message {
+      font-size: 1rem;
+      color: #e5e7eb;
       margin-top: 10px;
-      font-size: 0.9rem;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
     }
 
-    /* Logout button */
-    #logout-btn {
-      background: rgba(239, 68, 68, 0.1);
-      color: #fca5a5;
-      border: 1px solid rgba(239, 68, 68, 0.5);
-      padding: 6px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-size: 0.78rem;
-      margin-left: 10px;
-    }
-
-    #logout-btn:hover {
-      background: rgba(239, 68, 68, 0.2);
-    }
-
+    /* RESPONSIVE STYLES */
     @media (max-width: 700px) {
+      body {
+        padding: 0;
+        justify-content: flex-start;
+      }
+      
+      .fixed-header {
+        padding: 8px 12px;
+      }
+      
+      .header-title {
+        font-size: 1.1rem;
+      }
+      
+      .header-subtitle {
+        font-size: 0.7rem;
+      }
+      
+      .header-bottom {
+        gap: 8px;
+        justify-content: space-between;
+        padding: 3px 0;
+      }
+      
+      .user-info {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        max-width: 140px;
+        min-width: 0;
+        flex: 1;
+      }
+      
+      .logout-btn {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        gap: 3px;
+        flex-shrink: 0;
+      }
+      
+      .main-content {
+        margin-top: 95px;
+        padding: 12px;
+        gap: 15px;
+      }
+      
       .quiz-container {
-        margin: 10px;
+        padding: 15px;
+        border-radius: 14px;
+      }
+      
+      .login-box {
+        padding: 20px;
+        margin: 0 12px;
+      }
+      
+      .login-title {
+        font-size: 1.3rem;
       }
       
       .controls {
@@ -578,108 +804,300 @@
       button {
         flex: 1;
         min-width: 0;
+        font-size: 0.85rem;
+        padding: 8px 12px;
       }
       
-      .quiz-header {
+      .topic-info {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 8px;
       }
       
-      .timer-container {
+      .topic-name, .question-count {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      
+      .topic-row {
         flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      
+      .topic-row .topic-select,
+      .topic-row .start-btn {
+        width: 100%;
+      }
+      
+      .topic-select {
+        min-width: 0;
+        width: 100%;
+      }
+      
+      .start-btn {
+        width: 100%;
+      }
+      
+      /* Timer container mobile fix - keep in one line */
+      .timer-container {
+        flex-direction: row;
         gap: 5px;
-        align-items: flex-start;
+        align-items: center;
+        padding: 6px 10px;
+      }
+      
+      .timer-label {
+        font-size: 0.8rem;
+        margin-right: 5px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      
+      .timer-display {
+        font-size: 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        min-width: 0;
+        text-align: right;
+      }
+      
+      .question-box {
+        padding: 12px;
+        min-height: 120px;
+      }
+      
+      .question-text {
+        font-size: 0.95rem;
+      }
+      
+      .option {
+        padding: 7px 8px;
+        font-size: 0.9rem;
+      }
+      
+      .result-stats {
+        grid-template-columns: 1fr;
+      }
+      
+      .stat-item {
+        padding: 8px;
+      }
+      
+      .final-score {
+        padding: 15px;
+      }
+      
+      .result-header {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (min-width: 701px) {
+      body {
+        padding: 0;
+      }
+      
+      .main-content {
+        margin: 90px auto 20px;
+        padding: 20px;
+      }
+      
+      .header-title {
+        font-size: 1.4rem;
+      }
+      
+      .header-subtitle {
+        font-size: 0.85rem;
+      }
+    }
+    
+    /* For very small screens */
+    @media (max-width: 400px) {
+      .header-title {
+        font-size: 1rem;
+      }
+      
+      .header-subtitle {
+        font-size: 0.65rem;
+      }
+      
+      .user-info {
+        max-width: 120px;
+        font-size: 0.7rem;
+        padding: 3px 6px;
+        gap: 3px;
+      }
+      
+      .logout-btn {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+        gap: 2px;
+      }
+      
+      .main-content {
+        padding: 10px;
+        margin-top: 85px;
+      }
+      
+      .quiz-container {
+        padding: 12px;
+      }
+      
+      .login-box {
+        padding: 15px;
+      }
+      
+      .header-bottom {
+        gap: 6px;
+      }
+      
+      .timer-label {
+        font-size: 0.75rem;
+      }
+      
+      .timer-display {
+        font-size: 0.85rem;
+      }
+    }
+    
+    /* For extra small screens */
+    @media (max-width: 350px) {
+      .user-info {
+        max-width: 100px;
+        font-size: 0.65rem;
+        padding: 3px 5px;
+      }
+      
+      .logout-btn {
+        font-size: 0.65rem;
+        padding: 3px 5px;
+      }
+      
+      .timer-label {
+        font-size: 0.7rem;
+      }
+      
+      .timer-display {
+        font-size: 0.8rem;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Login Screen -->
-  <div class="login-container" id="login-container">
-    <div class="login-title">JE-(MCQ Practice)</div>
-    <div class="login-subtitle">• Secure Login Required •</div>
-    
-    <form class="login-form" id="login-form">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" class="form-input" placeholder="Enter your username" required autocomplete="username">
+  <!-- Fixed Header -->
+  <div class="fixed-header" style="display: none;">
+    <div class="header-content">
+      <div class="header-top">
+        <div class="header-center">
+          <div class="header-title">JE DPQ / LDCE MCQ Practice</div>
+          <div class="header-subtitle">Created by Gobind Sharma</div>
+        </div>
       </div>
-      
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+      <div class="header-bottom">
+        <div class="user-info" id="header-user-info" style="display: none;">
+          👤 <span id="header-username">Guest</span>
+        </div>
+        <button class="logout-btn" id="header-logout-btn" style="display: none;">
+          🚪 Logout
+        </button>
       </div>
-      
-      <button type="submit" class="login-btn" id="login-btn">Login</button>
-      
-      <div class="login-error" id="login-error"></div>
-    </form>
+    </div>
   </div>
-
-  <!-- Quiz Container (Hidden initially) -->
-  <div class="quiz-container" id="quiz-container">
-    <div class="quiz-header">
-      <div>
-        <div class="title">JE-DPQ / LDCE MCQ Practice</div>
-        <div class="subtitle"> • Created by Gobind Sharma • Logged in as: <span id="logged-in-user">Guest</span></div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <div class="badge" id="current-topic-badge">No topic loaded</div>
-        <button id="logout-btn">Logout</button>
-      </div>
-    </div>
-
-    <div class="topic-row">
-      <label for="topic-select">Topic:</label>
-      <select id="topic-select" class="topic-select">
-        <option value="">-- Loading topics from topics.json --</option>
-      </select>
-      <button class="start-btn" id="start-btn">Load Topic</button>
-    </div>
-
-    <div id="timer-container" class="timer-container" style="display: none;">
-      <div class="timer-label">⏰ Time Remaining:</div>
-      <div id="timer-display" class="timer-display">--:--:--</div>
-    </div>
-
-    <div class="toggle-row">
-      <input type="checkbox" id="random-toggle" checked />
-      <label for="random-toggle">Randomize questions & options</label>
-    </div>
-
-    <!-- Timer Notification will be inserted here by JavaScript -->
-
-    <div class="progress">
-      <div id="question-counter">Choose a topic and click Load Topic</div>
-      <div class="progress-bar">
-        <div id="progress-bar-fill" class="progress-bar-fill"></div>
-      </div>
-      <div id="score-mini">Score: 0</div>
-    </div>
-
-    <div class="question-box">
-      <div id="question-text" class="question-text">
-        Waiting for topic…
-      </div>
-      <ul id="options-list" class="options"></ul>
-      <div id="feedback" class="feedback"></div>
-    </div>
-
-    <!-- Modified Button Layout: Previous/Next on LEFT, Submit/Finish on RIGHT -->
-    <div class="controls">
-      <div class="left-controls">
-        <button id="previous-btn" disabled>← Previous</button>
-        <button id="next-btn" disabled>Next →</button>
-      </div>
-      <div class="right-controls">
-        <button id="submit-btn" disabled>Submit</button>
-        <button id="finish-btn" disabled>Finish Quiz</button>
+  
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Login Container (shown by default) -->
+    <div id="login-container">
+      <div class="login-box">
+        <div class="login-header">
+          <div class="login-title">🔐 JE DPQ / LDCE Login</div>
+          <div class="login-subtitle">Created by Gobind Sharma</div>
+        </div>
+        
+        <form id="login-form" class="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-input" placeholder="Enter your username" required autocomplete="username">
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+          </div>
+          
+          <div id="login-error" class="login-error"></div>
+          
+          <button type="submit" class="login-btn" id="login-btn">
+            Login
+          </button>
+        </form>
       </div>
     </div>
+    
+    <!-- Quiz Container (hidden by default, shown after login) -->
+    <div class="quiz-container">
+      <!-- TOPIC SELECTION SECTION -->
+      <div class="topic-section">
+        <div class="topic-info">
+          <div class="topic-name" id="quiz-topic-name">No topic selected</div>
+          <div class="question-count" id="quiz-question-count">0 questions</div>
+        </div>
+        
+        <div class="topic-row">
+          <select id="topic-select" class="topic-select">
+            <option value="">Loading topics from topics.json...</option>
+          </select>
+          <button class="start-btn" id="start-btn" disabled>Load Topic</button>
+        </div>
+      </div>
 
-    <div class="score-box">
-      <div id="final-score" class="final-score" style="display:none;"></div>
+      <!-- Timer Container -->
+      <div id="timer-container" class="timer-container" style="display: none;">
+        <div class="timer-label">⏰ Time Remaining:</div>
+        <div id="timer-display" class="timer-display">--:--:--</div>
+      </div>
+
+      <!-- RANDOMIZE TOGGLE -->
+      <div class="toggle-row">
+        <input type="checkbox" id="random-toggle" checked />
+        <label for="random-toggle">Randomize questions & options</label>
+      </div>
+
+      <div class="progress">
+        <div id="question-counter">Choose a topic and click Load Topic</div>
+        <div class="progress-bar">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+        <div id="score-mini">Score: 0</div>
+      </div>
+
+      <div class="question-box">
+        <div id="question-text" class="question-text">
+          Please login to access the quiz.
+        </div>
+        <ul id="options-list" class="options"></ul>
+        <div id="feedback" class="feedback"></div>
+      </div>
+
+      <!-- BUTTON LAYOUT -->
+      <div class="controls">
+        <div class="left-controls">
+          <button id="previous-btn" disabled>← Previous</button>
+          <button id="next-btn" disabled>Next →</button>
+        </div>
+        <div class="right-controls">
+          <button id="submit-btn" disabled>Submit</button>
+          <button id="finish-btn" disabled>Finish Quiz</button>
+        </div>
+      </div>
+
+      <div class="score-box">
+        <div id="final-score" class="final-score" style="display:none;"></div>
+      </div>
     </div>
   </div>
 
@@ -696,8 +1114,9 @@
     let timerInterval = null;
     let currentTopicName = "";
     let timerDuration = 0;
+    let quizStartTime = null;
     
-    // Timer notification variable - Added from Google Sheets version
+    // Timer notification variable
     let timerNotification = null;
     
     // Login system variables
@@ -707,19 +1126,24 @@
     const INACTIVITY_TIMEOUT = 15 * 60 * 1000; // 15 minutes in milliseconds
 
     // ========== DOM ELEMENTS ==========
+    const fixedHeaderEl = document.querySelector(".fixed-header");
+    const headerUserInfoEl = document.getElementById("header-user-info");
+    const headerUsernameEl = document.getElementById("header-username");
+    const headerLogoutBtnEl = document.getElementById("header-logout-btn");
+    
     const loginContainerEl = document.getElementById("login-container");
-    const quizContainerEl = document.getElementById("quiz-container");
+    const quizContainerEl = document.querySelector(".quiz-container");
     const loginFormEl = document.getElementById("login-form");
     const usernameEl = document.getElementById("username");
     const passwordEl = document.getElementById("password");
     const loginErrorEl = document.getElementById("login-error");
-    const loggedInUserEl = document.getElementById("logged-in-user");
-    const logoutBtnEl = document.getElementById("logout-btn");
+    const loginBtnEl = document.getElementById("login-btn");
 
     const topicSelectEl = document.getElementById("topic-select");
     const startBtnEl = document.getElementById("start-btn");
     const randomToggleEl = document.getElementById("random-toggle");
-    const topicBadgeEl = document.getElementById("current-topic-badge");
+    const quizTopicNameEl = document.getElementById("quiz-topic-name");
+    const quizQuestionCountEl = document.getElementById("quiz-question-count");
     const timerContainerEl = document.getElementById("timer-container");
     const timerDisplayEl = document.getElementById("timer-display");
 
@@ -789,7 +1213,7 @@
         
         // Show error to user
         loginErrorEl.textContent = "Error: Could not load users.xml. Please create a valid users.xml file.";
-        loginErrorEl.style.color = "#fb7185";
+        loginErrorEl.style.display = "block";
         
         // Don't create default users - force proper XML file
         userList = [];
@@ -809,9 +1233,12 @@
 
     function login(user) {
       currentUser = user;
-      loggedInUserEl.textContent = user.name;
+      headerUsernameEl.textContent = user.name;
       
-      // Show quiz container, hide login
+      // Show fixed header and quiz container, hide login
+      fixedHeaderEl.style.display = "block";
+      headerUserInfoEl.style.display = "block";
+      headerLogoutBtnEl.style.display = "block";
       loginContainerEl.style.display = "none";
       quizContainerEl.style.display = "block";
       
@@ -837,19 +1264,26 @@
           inactivityTimer = null;
         }
         
+        // Remove activity listeners
+        document.removeEventListener('mousemove', resetInactivityTimer);
+        document.removeEventListener('keypress', resetInactivityTimer);
+        document.removeEventListener('click', resetInactivityTimer);
+        
         // Reset quiz state
         resetQuizState();
         
         // Clear current user
         currentUser = null;
         
-        // Show login, hide quiz
+        // Hide fixed header and quiz, show login
+        fixedHeaderEl.style.display = "none";
         quizContainerEl.style.display = "none";
         loginContainerEl.style.display = "flex";
         
         // Clear login form
         loginFormEl.reset();
         loginErrorEl.textContent = "";
+        loginErrorEl.style.display = "none";
         
         // Focus on username field
         usernameEl.focus();
@@ -873,11 +1307,6 @@
       
       // Set new timer
       inactivityTimer = setTimeout(autoLogout, INACTIVITY_TIMEOUT);
-      
-      // Add activity listeners
-      document.addEventListener('mousemove', resetInactivityTimer);
-      document.addEventListener('keypress', resetInactivityTimer);
-      document.addEventListener('click', resetInactivityTimer);
     }
 
     function resetQuizState() {
@@ -891,9 +1320,10 @@
       timeRemaining = 0;
       timerDuration = 0;
       currentTopicName = "";
+      quizStartTime = null;
       
       // Reset UI
-      questionTextEl.textContent = "Waiting for topic…";
+      questionTextEl.textContent = "Please login to access the quiz.";
       optionsListEl.innerHTML = "";
       feedbackEl.textContent = "";
       submitBtn.disabled = true;
@@ -902,9 +1332,10 @@
       finishBtn.disabled = true;
       finalScoreEl.style.display = "none";
       progressBarFillEl.style.width = "0%";
-      questionCounterEl.textContent = "Choose a topic and click Load Topic";
+      questionCounterEl.textContent = "Select a topic and click Load Topic";
       scoreMiniEl.textContent = "Score: 0";
-      topicBadgeEl.textContent = "No topic loaded";
+      quizTopicNameEl.textContent = "No topic selected";
+      quizQuestionCountEl.textContent = "0 questions";
       timerContainerEl.style.display = "none";
       
       // Remove timer notification
@@ -920,33 +1351,49 @@
       
       if (!username || !password) {
         loginErrorEl.textContent = "Please enter both username and password";
+        loginErrorEl.style.display = "block";
         return;
       }
       
       // Clear previous error
       loginErrorEl.textContent = "";
+      loginErrorEl.style.display = "none";
+      
+      // Show loading state
+      loginBtnEl.disabled = true;
+      loginBtnEl.innerHTML = '<span class="btn-loader">Loading...</span>';
       
       // Ensure users are loaded
       if (userList.length === 0) {
         const loaded = await loadUsersFromXML();
         if (!loaded) {
           loginErrorEl.textContent = "Cannot load users. Please check users.xml file.";
+          loginErrorEl.style.display = "block";
+          loginBtnEl.disabled = false;
+          loginBtnEl.innerHTML = 'Login';
           return;
         }
       }
       
-      const user = authenticateUser(username, password);
-      
-      if (user) {
-        login(user);
-      } else {
-        loginErrorEl.textContent = "Invalid username or password";
-        usernameEl.focus();
-        usernameEl.select();
-      }
+      // Small delay to show loading state
+      setTimeout(() => {
+        const user = authenticateUser(username, password);
+        
+        if (user) {
+          login(user);
+        } else {
+          loginErrorEl.textContent = "Invalid username or password";
+          loginErrorEl.style.display = "block";
+          usernameEl.focus();
+          usernameEl.select();
+        }
+        
+        loginBtnEl.disabled = false;
+        loginBtnEl.innerHTML = 'Login';
+      }, 500);
     });
 
-    logoutBtnEl.addEventListener("click", logout);
+    headerLogoutBtnEl.addEventListener("click", logout);
 
     // ========== TIMER FUNCTIONS ==========
     function startTimer() {
@@ -999,7 +1446,7 @@
       timerContainerEl.style.display = "none";
     }
 
-    // ========== TIMER NOTIFICATION FUNCTIONS - Added from Google Sheets version ==========
+    // ========== TIMER NOTIFICATION FUNCTIONS ==========
     function showTimerNotification() {
       removeTimerNotification();
       
@@ -1057,26 +1504,16 @@
     }
 
     function autoFinishQuiz() {
-      const timeUpMessage = document.createElement("div");
-      timeUpMessage.className = "final-score";
-      timeUpMessage.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
-      timeUpMessage.style.borderColor = "rgba(239, 68, 68, 0.5)";
-      timeUpMessage.innerHTML = `
-        <strong style="color: #ef4444;">⏰ Time's Up!</strong><br/>
-        Quiz time has expired.<br/><br/>
-      `;
-      
-      finalScoreEl.parentNode.insertBefore(timeUpMessage, finalScoreEl);
-      
       showFinalResult();
       stopTimer();
       removeTimerNotification();
     }
 
     function formatTimeTaken() {
-      if (timerDuration <= 0) return "";
+      if (timerDuration <= 0 || !quizStartTime) return "";
       
-      const timeTaken = timerDuration - timeRemaining;
+      const endTime = Date.now();
+      const timeTaken = endTime - quizStartTime;
       const hours = Math.floor(timeTaken / (1000 * 60 * 60));
       const minutes = Math.floor((timeTaken % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeTaken % (1000 * 60)) / 1000);
@@ -1106,16 +1543,6 @@
         
         // Calculate total milliseconds
         timerDuration = (hours * 60 * 60 * 1000) + (minutes * 60 * 1000);
-        
-        // Update initial display if timer is set
-        if (timerDuration > 0) {
-          const initialHours = Math.floor(timerDuration / (1000 * 60 * 60));
-          const initialMinutes = Math.floor((timerDuration % (1000 * 60 * 60)) / (1000 * 60));
-          const initialSeconds = Math.floor((timerDuration % (1000 * 60)) / 1000);
-          
-          timerDisplayEl.textContent = 
-            `${initialHours.toString().padStart(2, '0')}:${initialMinutes.toString().padStart(2, '0')}:${initialSeconds.toString().padStart(2, '0')}`;
-        }
       }
 
       const qNodes = xmlDoc.getElementsByTagName("question");
@@ -1295,12 +1722,38 @@
       });
     }
 
-    function showFinalResult() {
-      if (timerInterval) {
-        stopTimer();
+    function calculateQuizStats() {
+      let attempted = 0;
+      let correct = 0;
+      
+      for (let i = 0; i < questions.length; i++) {
+        if (userAnswers[i] !== undefined) {
+          attempted++;
+          if (userAnswers[i] === questions[i].correctIndex) {
+            correct++;
+          }
+        }
       }
       
-      questionTextEl.textContent = "Quiz Finished!";
+      const percentage = questions.length > 0 ? ((correct / questions.length) * 100).toFixed(2) : 0;
+      
+      return {
+        total: questions.length,
+        attempted,
+        correct,
+        percentage
+      };
+    }
+
+    function showFinalResult() {
+      stopTimer();
+      removeTimerNotification();
+      
+      const stats = calculateQuizStats();
+      const timeTaken = formatTimeTaken();
+      
+      progressBarFillEl.style.width = "100%";
+      questionTextEl.textContent = "Quiz Completed!";
       optionsListEl.innerHTML = "";
       feedbackEl.textContent = "";
       submitBtn.style.display = "none";
@@ -1308,57 +1761,55 @@
       previousBtn.style.display = "none";
       finishBtn.style.display = "none";
       finalScoreEl.style.display = "block";
-
-      let finalScore = 0;
-      for (let i = 0; i < questions.length; i++) {
-        if (userAnswers[i] !== undefined && userAnswers[i] === questions[i].correctIndex) {
-          finalScore++;
-        }
-      }
-
-      const timerInfo = timerDuration > 0 ? 
-        `<br/><small style="color: #9ca3af;">Time taken: ${formatTimeTaken()}</small>` : '';
-
-      if (attempted === 0) {
-        finalScoreEl.innerHTML = `
-          <strong>Result:</strong> You did not attempt any question.<br/>
-          Total questions in topic: <strong>${questions.length}</strong>.${timerInfo}<br/><br/>
-          <button id="restart-btn">Restart Same Topic</button>
-          <button id="new-topic-btn">Choose New Topic</button>
-        `;
-      } else {
-        const accuracy = Math.round((finalScore / attempted) * 100);
-        finalScoreEl.innerHTML = `
-          <strong>Result:</strong> You scored <strong>${finalScore}</strong> out of <strong>${attempted}</strong> attempted questions.<br/>
-          Total questions in topic: <strong>${questions.length}</strong>.<br/>
-          Accuracy: <strong>${accuracy}%</strong>.${timerInfo}<br/><br/>
-          <button id="restart-btn">Restart Same Topic</button>
-          <button id="new-topic-btn">Choose New Topic</button>
-        `;
-      }
-
-      document.getElementById("restart-btn").onclick = () => {
-        restartQuiz();
-      };
       
-      document.getElementById("new-topic-btn").onclick = () => {
-        restartQuiz();
-        topicSelectEl.value = "";
-        topicBadgeEl.textContent = "No topic loaded";
-        questionTextEl.textContent = "Waiting for topic…";
-        optionsListEl.innerHTML = "";
-        feedbackEl.textContent = "";
-        submitBtn.style.display = "inline-block";
-        nextBtn.style.display = "inline-block";
-        previousBtn.style.display = "inline-block";
-        finishBtn.style.display = "inline-block";
-        finalScoreEl.style.display = "none";
-        progressBarFillEl.style.width = "0%";
-        questionCounterEl.textContent = "Choose a topic and click Load Topic";
-        scoreMiniEl.textContent = "Score: 0";
-        stopTimer();
-        removeTimerNotification(); // Remove notification when choosing new topic
-      };
+      let performanceMessage = "";
+      if (stats.percentage >= 80) {
+        performanceMessage = "🎉 Excellent! Outstanding performance!";
+      } else if (stats.percentage >= 60) {
+        performanceMessage = "👍 Good job! Keep practicing!";
+      } else if (stats.percentage >= 40) {
+        performanceMessage = "📚 Keep learning! Review the topics again.";
+      } else {
+        performanceMessage = "📖 Needs improvement. Study the topic thoroughly.";
+      }
+      
+      finalScoreEl.innerHTML = `
+        <div class="result-header">Quiz Results</div>
+        <div class="result-stats">
+          <div class="stat-item">
+            <div class="stat-label">Total Questions</div>
+            <div class="stat-value">${stats.total}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Attempted</div>
+            <div class="stat-value">${stats.attempted}/${stats.total}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Correct Answers</div>
+            <div class="stat-value">${stats.correct}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Score Percentage</div>
+            <div class="stat-value stat-percentage">${stats.percentage}%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Time Taken</div>
+            <div class="stat-value stat-time">${timeTaken || "No timer set"}</div>
+          </div>
+          ${timerDuration > 0 ? `
+          <div class="stat-item">
+            <div class="stat-label">Time Limit</div>
+            <div class="stat-value">${Math.floor(timerDuration / (1000 * 60))} minutes</div>
+          </div>
+          ` : ''}
+        </div>
+        <div class="result-message">
+          ${performanceMessage}
+        </div>
+        <div class="result-summary">
+          <em>Select a new topic from the dropdown above to start another quiz.</em>
+        </div>
+      `;
       
       resetInactivityTimer(); // Reset inactivity timer on quiz completion
     }
@@ -1471,7 +1922,7 @@
 
       currentTopicName = trimmed;
       const filename = `${trimmed}.xml`;
-      topicBadgeEl.textContent = `Loading: ${filename}`;
+      quizTopicNameEl.textContent = trimmed;
 
       try {
         questionTextEl.textContent = `Loading ${filename}…`;
@@ -1487,6 +1938,7 @@
 
         timerContainerEl.style.display = "none";
         timerDuration = 0;
+        quizStartTime = Date.now();
         
         // Remove any existing timer notification
         removeTimerNotification();
@@ -1501,7 +1953,7 @@
         if (rawQuestions.length === 0) {
           questionTextEl.textContent = "No questions parsed from XML. Check format.";
           questionsLoaded = false;
-          topicBadgeEl.textContent = `Error in ${filename}`;
+          quizTopicNameEl.textContent = `Error in ${filename}`;
           return;
         }
 
@@ -1519,7 +1971,8 @@
         previousBtn.style.display = "inline-block";
         finishBtn.style.display = "inline-block";
 
-        topicBadgeEl.textContent = `Topic: ${trimmed} (${questions.length} questions)`;
+        quizTopicNameEl.textContent = trimmed;
+        quizQuestionCountEl.textContent = `${questions.length} questions`;
         
         // Show timer notification if timer is set
         if (timerDuration > 0) {
@@ -1536,7 +1989,7 @@
         nextBtn.disabled = true;
         previousBtn.disabled = true;
         finishBtn.disabled = true;
-        topicBadgeEl.textContent = `Failed: ${filename}`;
+        quizTopicNameEl.textContent = `Failed: ${filename}`;
         resetInactivityTimer();
       }
     }
@@ -1582,6 +2035,9 @@
           }
         });
         
+        // Enable start button
+        startBtnEl.disabled = false;
+        
         console.log(`Loaded ${topics.length} topics from topics.json`);
         
       } catch (err) {
@@ -1591,10 +2047,10 @@
           <option value="">Create topics.json with topic names</option>
         `;
         
-        topicBadgeEl.textContent = "Error: topics.json";
-        topicBadgeEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
-        topicBadgeEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
-        topicBadgeEl.style.color = "#fca5a5";
+        quizTopicNameEl.textContent = "Error: topics.json";
+        quizTopicNameEl.style.backgroundColor = "rgba(239, 68, 68, 0.1)";
+        quizTopicNameEl.style.borderColor = "rgba(239, 68, 68, 0.5)";
+        quizTopicNameEl.style.color = "#fca5a5";
       }
       resetInactivityTimer();
     }
@@ -1607,19 +2063,16 @@
       // Add focus to username field
       usernameEl.focus();
       
-      // Set up keyboard shortcuts
-      document.addEventListener('keydown', function(e) {
-        // Escape key to focus on logout when logged in
-        if (e.key === 'Escape' && currentUser) {
-          logoutBtnEl.focus();
-        }
-      });
-      
       console.log("App initialized. Please login to continue.");
     }
 
     // Start the app when page loads
     document.addEventListener("DOMContentLoaded", initializeApp);
+    
+    // Add activity listeners for inactivity timer
+    document.addEventListener('mousemove', resetInactivityTimer);
+    document.addEventListener('keypress', resetInactivityTimer);
+    document.addEventListener('click', resetInactivityTimer);
   </script>
 </body>
 </html>
